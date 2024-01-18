@@ -11,7 +11,7 @@ struct LearnSwiftlyApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                HomePage()
+                MainView()
             }
         }
     }

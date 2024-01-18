@@ -6,10 +6,10 @@
 
 import SwiftUI
 
-struct HomePage: View {
+struct HomeView: View {
     var body: some View {
         LinearGradient(
-            gradient: Gradient(colors: [.white, .gray, .gray, .gray, .white]),
+            gradient: Gradient(colors: [Color("footer")]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -21,11 +21,11 @@ struct HomePage: View {
                 
                 Spacer()
                 
-                Text("Welcome to Your App")
+                Text("Welcome to Your App. Select the course you want to learn. ")
                     .font(.largeTitle)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                 
-                    NavigationLink(destination: ChapterView()) {
+                    NavigationLink(destination: EnrolledView()) {
                         Text("Next")
                     }
                 
@@ -38,8 +38,8 @@ struct HomePage: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomePage()
+        HomeView()
     }
 }

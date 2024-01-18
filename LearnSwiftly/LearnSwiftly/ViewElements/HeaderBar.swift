@@ -9,8 +9,9 @@ import SwiftUI
 struct HeaderBar: View {
     var body: some View {
         Rectangle()
-            .frame(height: 150)
-            .foregroundColor(Color("footer"))
+            .frame(height: 120)
+            .foregroundColor(Color("footerBar"))
+            .opacity(0.8)
     }
 }
 

@@ -8,7 +8,28 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LinearGradient(
+            gradient: Gradient(colors: [Color("footer")]),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+        .edgesIgnoringSafeArea(.all)
+
+        .overlay(
+            VStack {
+                HeaderBar()
+                Spacer()
+                
+                Text("Welcome to Profile View")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                
+                Spacer()
+
+                FooterBar()
+            }
+            .edgesIgnoringSafeArea(.all)
+        )
     }
 }
 

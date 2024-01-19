@@ -8,10 +8,18 @@ import SwiftUI
 
 @main
 struct LearnSwiftlyApp: App {
+//    UserDefaults.standard.removeObject(forKey: Constants.currentOnboardingVersion)
+    @AppStorage(Constants.currentOnboardingVersion) private var hasSeenOnboarding = false
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                MainView()
+                
+                if hasSeenOnboarding {
+                    HomeView()
+                } else {
+                    OnboardingScreen()
+                }
             }
         }
     }

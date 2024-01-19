@@ -9,7 +9,7 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         LinearGradient(
-            gradient: Gradient(colors: [Color("footer")]),
+            gradient: Gradient(colors: [Color("screenBackground")]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -17,9 +17,22 @@ struct HomeView: View {
 
         .overlay(
             VStack {
-                HeaderBar()
+                HeaderBarHome()
                 
-                Spacer()
+                HStack {
+                    Text("My Courses")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: CourseView()) {
+                        Text("View All")
+                    }
+                    
+                }
+                .foregroundColor(.white)
+                .padding()
                 
                 Text("Welcome to Your App. Select the course you want to learn. ")
                     .font(.largeTitle)
@@ -30,8 +43,6 @@ struct HomeView: View {
                     }
                 
                 Spacer()
-                
-                FooterBar()
             }
             .edgesIgnoringSafeArea(.all)
         )

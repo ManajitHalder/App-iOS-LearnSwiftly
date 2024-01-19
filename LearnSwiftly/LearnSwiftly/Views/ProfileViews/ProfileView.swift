@@ -1,15 +1,15 @@
 //
-//  LeadgerBoardView.swift
+//  ProfileView.swift
 //  
 //  Created by Manajit Halder on 17/01/24 using Swift 5.0 on MacOS 13.6
 //  
 
 import SwiftUI
 
-struct LeaderBoardView: View {
+struct ProfileView: View {
     var body: some View {
         LinearGradient(
-            gradient: Gradient(colors: [Color("footer")]),
+            gradient: Gradient(colors: [Color("screenBackground")]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -18,24 +18,23 @@ struct LeaderBoardView: View {
         .overlay(
             VStack {
                 HeaderBar()
-                
                 Spacer()
                 
-                Text("Welcome to Leadger Board View")
+                Text("Welcome to Profile View")
                     .font(.largeTitle)
                     .foregroundColor(.white)
                 
                 Spacer()
-                
-                FooterBar()
+
+               // FooterBar()
             }
             .edgesIgnoringSafeArea(.all)
         )
     }
 }
 
-struct LeaderBoardView_Previews: PreviewProvider {
+struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        LeaderBoardView()
+        ProfileView()
     }
 }

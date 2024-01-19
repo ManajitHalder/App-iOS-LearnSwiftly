@@ -9,7 +9,7 @@ import SwiftUI
 struct EnrolledView: View {
     var body: some View {
         LinearGradient(
-            gradient: Gradient(colors: [Color("footer")]),
+            gradient: Gradient(colors: [Color("screenBackground")]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
@@ -27,7 +27,7 @@ struct EnrolledView: View {
                 
                 Spacer()
 
-                FooterBar()
+               // FooterBar()
             }
             .edgesIgnoringSafeArea(.all)
         )

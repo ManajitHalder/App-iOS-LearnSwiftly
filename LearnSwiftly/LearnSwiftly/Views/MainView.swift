@@ -9,7 +9,8 @@ import SwiftUI
 struct MainView: View {
     
     var body: some View {
-            TabView {
+        TabView {
+            Group {
                 HomeView()
                     .tabItem {
                         Label("Home", systemImage: "house")
@@ -29,7 +30,9 @@ struct MainView: View {
                         Label("Profile", systemImage: "person.crop.circle")
                     }
             }
-            .accentColor(Color.cyan)
+            .toolbarColorScheme(.light, for: .tabBar)
+            .toolbarBackground(.visible, for: .tabBar)
+        }
     }
 }
 

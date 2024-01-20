@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-struct EnrolledView: View {
+struct CoursesListView: View {
     var body: some View {
         LinearGradient(
             gradient: Gradient(colors: [Color("screenBackground")]),
@@ -34,8 +34,8 @@ struct EnrolledView: View {
     }
 }
 
-struct EnrolledView_Previews: PreviewProvider {
+struct CoursesListView_Previews: PreviewProvider {
     static var previews: some View {
-        EnrolledView()
+        CoursesListView()
     }
 }

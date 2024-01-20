@@ -11,14 +11,14 @@ struct MainView: View {
     var body: some View {
         TabView {
             Group {
-                HomeView()
+                LearnView()
                     .tabItem {
-                        Label("Home", systemImage: "house")
+                        Label("Learn", systemImage: "book.fill")
                     }
                 
-                EnrolledView()
+                CoursesListView()
                     .tabItem {
-                        Label("Enrolled", systemImage: "book")
+                        Label("Courses", systemImage: "list.bullet.clipboard.fill")
                     }
                 
                 LeaderBoardView()

@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-struct HeaderBarHome: View {
+struct LearnViewHeaderBar: View {
     @State private var isUpgradeToProViewEnabled: Bool = false
     
     var body: some View {
@@ -61,8 +61,8 @@ struct HeaderBarHome: View {
     }
 }
 
-struct HeaderBarHome_Previews: PreviewProvider {
+struct LearnViewHeaderBar_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderBarHome()
+        LearnViewHeaderBar()
     }
 }

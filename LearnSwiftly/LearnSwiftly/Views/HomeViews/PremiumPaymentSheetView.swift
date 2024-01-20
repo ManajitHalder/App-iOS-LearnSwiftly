@@ -1,13 +1,13 @@
 //
-//  UpgradeToProView.swift
+//  PremiumPaymentSheetView.swift
 //  
-//  Created by Manajit Halder on 19/01/24 using Swift 5.0 on MacOS 13.6
+//  Created by Manajit Halder on 20/01/24 using Swift 5.0 on MacOS 13.6
 //  
 
 import SwiftUI
 
-struct UpgradeToProSheetView: View {
-    @Binding var isUpgradeToProViewEnabled: Bool
+struct PremiumPaymentSheetView: View {
+    @Binding var isPremiumCourseSelected: Bool
     
     var body: some View {
         VStack {
@@ -15,32 +15,29 @@ struct UpgradeToProSheetView: View {
                 Spacer()
                 
                 Button {
-                    isUpgradeToProViewEnabled.toggle()
+                    isPremiumCourseSelected.toggle()
                 } label: {
                     Image(systemName: "xmark")
                         .foregroundColor(.white)
                         .font(.headline)
                 }
                 .padding()
-            }            
+            }
             Spacer()
             
-            PricingView(isUpgradeToProViewEnabled: $isUpgradeToProViewEnabled)
-                .foregroundColor(.white)
-                .padding()
+            Text("Premium Payment:")
             
             Spacer()
-            
         }
         .presentationDetents([.fraction(0.95)])
         .presentationDragIndicator(.hidden)
         .presentationCornerRadius(20.0)
-        .presentationBackground(Color("screenBackground"))
+        .presentationBackground(Color.gray)
     }
 }
 
-struct UpgradeToProSheetView_Previews: PreviewProvider {
+struct PremiumPaymentSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        UpgradeToProSheetView(isUpgradeToProViewEnabled: .constant(false))
+        PremiumPaymentSheetView(isPremiumCourseSelected: .constant(false))
     }
 }

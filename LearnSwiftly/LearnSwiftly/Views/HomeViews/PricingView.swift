@@ -7,6 +7,9 @@
 import SwiftUI
 
 struct PricingView: View {
+    @Binding var isUpgradeToProViewEnabled: Bool
+    @State private var isPremiumCourseSelected: Bool = false
+    
     var body: some View {
         
         ScrollView(showsIndicators: true) {
@@ -19,9 +22,10 @@ struct PricingView: View {
                     .padding(20)
                     .font(.callout)
                 
+                // Basic Plan
                 VStack {
                     HStack {
-                        Text("Basic")
+                        Text("Basic Plan")
                             .font(.title)
                         
                         Text("*Free of cost")
@@ -43,7 +47,7 @@ struct PricingView: View {
                     
                     HStack {
                         Button {
-                            //
+                            isUpgradeToProViewEnabled.toggle()
                         } label: {
                             Text("Keep Learning")
                                 .fontWeight(.bold)
@@ -56,6 +60,55 @@ struct PricingView: View {
                 }
                 .background(.gray)
                 .foregroundColor(.white)
+                .padding(20)
+                
+                // Basic Plan
+                VStack {
+                    Text("Premium Plan")
+                        .font(.title)
+                        .padding([.top, .bottom], 20)
+                    
+                    Text("Expand your knowledge with practice exerciese, more code examples and AI direven custom course creation and much more. Enjoy learning")
+                        .font(.callout)
+                        .padding([.leading, .trailing], 20)
+                    
+                    Divider()
+                        .background(.black)
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        BulletPoint(text: "Read any lesson")
+       
+                        BulletPoint(text: "Practise exercises")
+                        
+                        BulletPoint(text: "Code examples")
+                        
+                        BulletPoint(text: "100+ interactive questions")
+                        
+                        BulletPoint(text: "AI driven custom course creation")
+                    }
+                    .padding(20)
+                    
+                    HStack {
+                        Button {
+                            isPremiumCourseSelected.toggle()
+                        } label: {
+                            Text("Upgrade to Premium")
+                                .fontWeight(.bold)
+                        }
+                        .buttonBorderShape(.capsule)
+                        .buttonStyle(.borderedProminent)
+                        .foregroundColor(.white)
+                        .padding(.bottom, 20)
+                        
+                        .sheet(isPresented: $isPremiumCourseSelected) {
+                            PremiumPaymentSheetView(isPremiumCourseSelected: $isPremiumCourseSelected)
+                                .foregroundColor(.white)
+                        }
+                        
+                    }
+                }
+                .background(.white)
+                .foregroundColor(.black)
                 .padding(20)
             }
         }
@@ -80,6 +133,6 @@ struct BulletPoint: View {
 
 struct PricingView_Previews: PreviewProvider {
     static var previews: some View {
-        PricingView()
+        PricingView(isUpgradeToProViewEnabled: .constant(false))
     }
 }

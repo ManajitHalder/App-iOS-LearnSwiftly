@@ -7,10 +7,8 @@
 import SwiftUI
 
 struct OnboardingScreen: View {
-    @State private var selectedView = 1
-    let maxNumberOfScreens = 3
-//    static let currentOnboardingVersion = "onboardingversion_1.0.0"
-//    UserDefaults.standard.removeObject(forKey: <#T##String#>)
+//    @State private var selectedView = 1
+//    let maxNumberOfScreens = 3
     @AppStorage(Constants.currentOnboardingVersion) private var hasSeenOnboarding = false
     
     var body: some View {
@@ -39,24 +37,23 @@ struct OnboardingScreen: View {
                         title: "Welcome",
                         description: "You are welcome to the learning center of Swift programming related topics. Here you are going to learn Swift, SwiftUI and iOS App development topics. Have Fun!")
                 }
-                .tabViewStyle(.page(indexDisplayMode: .always))
+                .tabViewStyle(.page(indexDisplayMode: .automatic))
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
                 
                 Button {
-                    if selectedView == maxNumberOfScreens {
-                        print("hasSeeOnboarding true")
-                        hasSeenOnboarding = true
-                    } else {
-                        selectedView += 1
-                    }
+                    // Remove the previous onboarding version
+                    Constants.removeOldOnboardingVersions()
+                    
+//                    if selectedView == maxNumberOfScreens {
+                    hasSeenOnboarding.toggle()
+//                    } else {
+//                        selectedView += 1
+//                    }
                 } label: {
-                    if selectedView == maxNumberOfScreens {
+//                    if selectedView == maxNumberOfScreens {
                         Text("Let's get started")
                             .fontWeight(.bold)
-                    } else {
-                        Text("Next")
-                            .fontWeight(.bold)
-                    }
+//                    }
                 }
                 .buttonStyle(.borderedProminent)
                 .padding(.vertical)

@@ -29,6 +29,9 @@
 		C4AA8BFE2B5AC2AF002FBD86 /* UpgradeToProSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA8BFD2B5AC2AF002FBD86 /* UpgradeToProSheetView.swift */; };
 		C4AA8C002B5AEB00002FBD86 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA8BFF2B5AEB00002FBD86 /* Constants.swift */; };
 		C4AA8C022B5AED58002FBD86 /* PricingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA8C012B5AED58002FBD86 /* PricingView.swift */; };
+		C4F7ABCD2B5D321E0014B985 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7ABCC2B5D321D0014B985 /* Course.swift */; };
+		C4F7ABCF2B5D33610014B985 /* Chapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7ABCE2B5D33610014B985 /* Chapters.swift */; };
+		C4F7ABD12B5D34910014B985 /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7ABD02B5D34910014B985 /* Topics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		C4AA8BFD2B5AC2AF002FBD86 /* UpgradeToProSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeToProSheetView.swift; sourceTree = "<group>"; };
 		C4AA8BFF2B5AEB00002FBD86 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C4AA8C012B5AED58002FBD86 /* PricingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingView.swift; sourceTree = "<group>"; };
+		C4F7ABCC2B5D321D0014B985 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		C4F7ABCE2B5D33610014B985 /* Chapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapters.swift; sourceTree = "<group>"; };
+		C4F7ABD02B5D34910014B985 /* Topics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 			children = (
 				C49C0C602B56FAED00BC3076 /* Info.plist */,
 				C403D6B32B568C9800B351D6 /* LearnSwiftlyApp.swift */,
+				C4F7ABCB2B5D31F70014B985 /* Models */,
 				C404F9312B57F26400898F99 /* Views */,
 				C428825F2B5BA7190039984F /* Constants */,
 				C404F9342B58147E00898F99 /* ViewElements */,
@@ -187,6 +194,16 @@
 			path = OnboardingViews;
 			sourceTree = "<group>";
 		};
+		C4F7ABCB2B5D31F70014B985 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4F7ABD02B5D34910014B985 /* Topics.swift */,
+				C4F7ABCE2B5D33610014B985 /* Chapters.swift */,
+				C4F7ABCC2B5D321D0014B985 /* Course.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,13 +282,16 @@
 				C428825E2B5B8C6F0039984F /* PremiumPaymentSheetView.swift in Sources */,
 				C4AA8BFC2B5A9675002FBD86 /* LearnViewHeaderBar.swift in Sources */,
 				C404F93A2B5823F000898F99 /* LeaderBoardView.swift in Sources */,
+				C4F7ABD12B5D34910014B985 /* Topics.swift in Sources */,
 				C404F9382B5815E700898F99 /* HeaderBar.swift in Sources */,
 				C404F9362B58149F00898F99 /* FooterBar.swift in Sources */,
 				C4AA8BFE2B5AC2AF002FBD86 /* UpgradeToProSheetView.swift in Sources */,
+				C4F7ABCF2B5D33610014B985 /* Chapters.swift in Sources */,
 				C4AA8BF82B5A76C4002FBD86 /* OnboardingPageView.swift in Sources */,
 				C440A7A22B598F2100935A47 /* CourseView.swift in Sources */,
 				C4AA8C022B5AED58002FBD86 /* PricingView.swift in Sources */,
 				C4AA8BF52B5A76A5002FBD86 /* OnboardingScreen.swift in Sources */,
+				C4F7ABCD2B5D321E0014B985 /* Course.swift in Sources */,
 				C4AA8BFA2B5A8A46002FBD86 /* EnrolledCoursesPageView.swift in Sources */,
 				C404F93C2B582AAE00898F99 /* ProfileView.swift in Sources */,
 				C440A7A42B598F9100935A47 /* EnrolledCourseListView.swift in Sources */,

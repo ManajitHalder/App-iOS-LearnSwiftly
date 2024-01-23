@@ -151,6 +151,7 @@
 				C403D6B52B568C9800B351D6 /* LearnView.swift */,
 				C4AA8BFB2B5A9675002FBD86 /* LearnViewHeaderBar.swift */,
 				C4AA8BF92B5A8A46002FBD86 /* EnrolledCoursesPageView.swift */,
+				C440A7A32B598F9100935A47 /* EnrolledCourseListView.swift */,
 				C4AA8BFD2B5AC2AF002FBD86 /* UpgradeToProSheetView.swift */,
 				C4AA8C012B5AED58002FBD86 /* PricingView.swift */,
 				C428825D2B5B8C6F0039984F /* PremiumPaymentSheetView.swift */,
@@ -164,7 +165,6 @@
 				C440A7A12B598F2100935A47 /* CourseView.swift */,
 				C404F9322B57F27600898F99 /* CoursesListView.swift */,
 				C440A7A52B59903B00935A47 /* ChapterView.swift */,
-				C440A7A32B598F9100935A47 /* EnrolledCourseListView.swift */,
 			);
 			path = CoursesViews;
 			sourceTree = "<group>";

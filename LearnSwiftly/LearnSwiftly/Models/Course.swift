@@ -6,17 +6,23 @@
 
 import Foundation
 
-struct CourseStatus: Identifiable {
-    let id: UUID
-    var enrolled: Bool
-    var inprogress: Bool
-    var completed: Bool
+enum CourseStatus: String, CaseIterable {
+    case notEnrolled
+    case enrolled
+    case inProgress
+    case completed
     
-    init(id: UUID = UUID(), enrolled: Bool = false, inprogress: Bool = false, completed: Bool = false) {
-        self.id = id
-        self.enrolled = enrolled
-        self.inprogress = inprogress
-        self.completed = completed
+    func name() -> String {
+        switch self {
+        case .notEnrolled:
+            return "Not Enrolled"
+        case .enrolled:
+            return "Enrolled"
+        case .inProgress:
+            return "In Progress"
+        case .completed:
+            return "Completed"
+        }
     }
 }
 
@@ -26,5 +32,14 @@ struct Course: Identifiable {
     var logo: String
     var description: String
     var status: CourseStatus
-    var chapters: [Chapters]
+    var chapters: [String]
+    
+    init(id: UUID = UUID(), title: String, logo: String, description: String, status: CourseStatus, chapters: [String]) {
+        self.id = id
+        self.title = title
+        self.logo = logo
+        self.description = description
+        self.status = status
+        self.chapters = []
+    }
 }

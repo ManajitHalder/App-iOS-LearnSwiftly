@@ -6,24 +6,30 @@
 
 import Foundation
 
-struct ChapterStatus: Identifiable {
-    let id: UUID
-    var locked: Bool
-    var inprogress: Bool
-    var completed: Bool
+enum ChapterStatus: String, CaseIterable {
+    case yetToStart
+    case inProgress
+    case locked
+    case completed
     
-    init(id: UUID = UUID(), locked: Bool = false, inprogress: Bool = false, completed: Bool = false) {
-        self.id = id
-        self.locked = locked
-        self.inprogress = inprogress
-        self.completed = completed
+    func name() -> String {
+        return self.rawValue.capitalized
     }
 }
 
 struct Chapters: Identifiable {
     let id: UUID
+    let courseTitle: String
     var name: String
     var summary: String
     var topicsList: [Topics]
     var status: ChapterStatus
+    
+    init(id: UUID = UUID(), name: String, summary: String, topicsList: [Topics], status: ChapterStatus) {
+        self.id = id
+        self.name = name
+        self.summary = summary
+        self.topicsList = topicsList
+        self.status = status
+    }
 }

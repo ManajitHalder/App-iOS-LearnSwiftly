@@ -12,17 +12,8 @@ enum CourseStatus: String, CaseIterable {
     case inProgress
     case completed
     
-    func name() -> String {
-        switch self {
-        case .notEnrolled:
-            return "Not Enrolled"
-        case .enrolled:
-            return "Enrolled"
-        case .inProgress:
-            return "In Progress"
-        case .completed:
-            return "Completed"
-        }
+    var name: String {
+        self.rawValue.capitalized
     }
 }
 
@@ -32,14 +23,14 @@ struct Course: Identifiable {
     var logo: String
     var description: String
     var status: CourseStatus
-    var chapters: [String]
+    var content: [[Chapter: Content]]
     
-    init(id: UUID = UUID(), title: String, logo: String, description: String, status: CourseStatus, chapters: [String]) {
+    init(id: UUID, title: String, logo: String, description: String, status: CourseStatus, numberOfChapters: [Int], content: [[Chapter : Content]]) {
         self.id = id
         self.title = title
         self.logo = logo
         self.description = description
         self.status = status
-        self.chapters = []
+        self.content = []
     }
 }

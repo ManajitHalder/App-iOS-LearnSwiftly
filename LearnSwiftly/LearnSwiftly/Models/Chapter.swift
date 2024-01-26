@@ -12,24 +12,23 @@ enum ChapterStatus: String, CaseIterable {
     case locked
     case completed
     
-    func name() -> String {
+    var name: String {
         return self.rawValue.capitalized
     }
 }
 
-struct Chapters: Identifiable {
+struct Chapter: Identifiable, Hashable {
     let id: UUID
-    let courseTitle: String
     var name: String
     var summary: String
-    var topicsList: [Topics]
     var status: ChapterStatus
+    var chapterIndex: Int
     
-    init(id: UUID = UUID(), name: String, summary: String, topicsList: [Topics], status: ChapterStatus) {
+    init(id: UUID = UUID(), name: String, summary: String, status: ChapterStatus, index: Int) {
         self.id = id
         self.name = name
         self.summary = summary
-        self.topicsList = topicsList
         self.status = status
+        self.chapterIndex = index
     }
 }

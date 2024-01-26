@@ -13,4 +13,13 @@ struct Quiz: Identifiable {
     var answer: String
     var responseMessage: String
     var isCorrect: Bool?
+    
+    init(id: UUID = UUID(), question: String, options: [String], answer: String, responseMessage: String, isCorrect: Bool?) {
+        self.id = id
+        self.question = question
+        self.options = options
+        self.answer = answer
+        self.responseMessage = responseMessage
+        self.isCorrect = isCorrect
+    }
 }

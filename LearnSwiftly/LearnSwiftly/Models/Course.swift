@@ -57,7 +57,7 @@ extension Course {
     
     static let course2 = Course(
             title: "JavaScript Programming Basics",
-            logo: "person.text.rectangle",
+            logo: "globe.central.south.asia.fill",
             description: "Learn programming in JavaScript for developing apps for Web Developemnt for MacOS and Windows platforms.",
             status: CourseStatus.notEnrolled,
             content: [[Chapter.chapter11 : Content.content11],
@@ -71,7 +71,7 @@ extension Course {
     
     static let course3 = Course(
             title: "HTML and CSS Programming Basics",
-            logo: "person.text.rectangle",
+            logo: "sun.dust.circle.fill",
             description: "Learn programming in HTML and CSS for developing apps for Web Developemnt for MacOS and Windows platforms.",
             status: CourseStatus.notEnrolled,
             content: [[Chapter.chapter11 : Content.content11],
@@ -83,5 +83,19 @@ extension Course {
                      ]
     )
     
-    static let sampleData: [Course] = [course1, course2, course3]
+    static let course4 = Course(
+            title: "Generative AI in depth",
+            logo: "sparkles",
+            description: "Programming using Generation AI tools and Softwares. Chat GPT and Chat Bot in iOS Application.",
+            status: CourseStatus.notEnrolled,
+            content: [[Chapter.chapter11 : Content.content11],
+                      [Chapter.chapter12 : Content.content12],
+                      [Chapter.chapter13 : Content.content13],
+                      [Chapter.chapter21 : Content.content21],
+                      [Chapter.chapter22 : Content.content22],
+                      [Chapter.chapter23 : Content.content23]
+                     ]
+    )
+    
+    static let sampleData: [Course] = [course1, course2, course3, course4]
 }

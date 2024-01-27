@@ -7,6 +7,8 @@
 import SwiftUI
 
 struct CoursesListView: View {
+    @ObservedObject private var courseViewModel = CourseViewModel()
+    
     var body: some View {
         LinearGradient(
             gradient: Gradient(colors: [Color("screenBackground")]),
@@ -19,14 +21,34 @@ struct CoursesListView: View {
             VStack {
                 HeaderBar()
                 
+//                Spacer()
+//
+//                Text("Welcome to Enrolled View")
+//                    .font(.largeTitle)
+//                    .foregroundColor(.white)
+//
+                HStack {
+                    Text("All Courses")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                }
+                .foregroundColor(.white)
+                .padding()
+                
                 Spacer()
                 
-                Text("Welcome to Enrolled View")
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                
-                Spacer()
-
+                ScrollView {
+                    VStack {
+                        ForEach(courseViewModel.courses) { course in
+                            CourseView(
+                                logo: course.logo,
+                                title: course.title,
+                                description: course.description)
+                        }
+                    }
+                }
                // FooterBar()
             }
             .edgesIgnoringSafeArea(.all)

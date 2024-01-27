@@ -9,6 +9,7 @@ import Foundation
 enum ContentType {
     case text(String)
     case code(String)
+    case image(String)
 }
 
 struct ContentElement: Identifiable {

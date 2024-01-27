@@ -7,6 +7,8 @@
 import SwiftUI
 
 struct LearnView: View {
+    @ObservedObject private var courseViewModel = CourseViewModel()
+    
     var body: some View {
         LinearGradient(
             gradient: Gradient(colors: [Color("screenBackground")]),
@@ -40,32 +42,16 @@ struct LearnView: View {
                 .foregroundColor(.white)
                 .padding()
                 
-                
-                
                 ScrollView {
                     VStack {
-                        CourseView(
-                            logo: "person.text.rectangle",
-                            title: "Swift Programming Basics",
-                            description: "Learn programming in Swift for developing apps for iOS, iPadOS, MacOS and other Apple platforms.")
-                        
-                        CourseView(
-                            logo: "person.text.rectangle",
-                            title: "Swift Programming Basics",
-                            description: "Learn programming in Swift for developing apps for iOS, iPadOS, MacOS and other Apple platforms.")
-                        
-                        CourseView(
-                            logo: "person.text.rectangle",
-                            title: "Swift Programming Basics",
-                            description: "Learn programming in Swift for developing apps for iOS, iPadOS, MacOS and other Apple platforms.")
-                        
-                        CourseView(
-                            logo: "person.text.rectangle",
-                            title: "Swift Programming Basics",
-                            description: "Learn programming in Swift for developing apps for iOS, iPadOS, MacOS and other Apple platforms.")
+                        ForEach(courseViewModel.courses) { course in
+                            CourseView(
+                                logo: course.logo,
+                                title: course.title,
+                                description: course.description)
+                        }
                     }
                 }
-                
                 Spacer()
             }
             .edgesIgnoringSafeArea(.all)

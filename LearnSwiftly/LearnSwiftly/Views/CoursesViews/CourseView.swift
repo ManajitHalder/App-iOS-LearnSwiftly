@@ -26,7 +26,8 @@ struct CourseView: View {
                             .resizable()
                             .scaledToFit()
                             .foregroundColor(.purple)
-                            .padding(.trailing, 25)
+                            .padding([.trailing, .leading], 25)
+//                            .padding(.top, 10)
                         
                         Text(title)
                             .font(.custom("Cochin", size: 25))
@@ -46,7 +47,9 @@ struct CourseView: View {
                         .font(.custom("Cochin", size: 20))
                         .padding(.bottom, 10)
                 }
+//                .padding(.bottom, 50)
             }
+//            .padding(.bottom, 20)
         }
     }
 }

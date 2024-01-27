@@ -6,12 +6,24 @@
 
 import Foundation
 
-class AllCourses {
+final class AllCourses {
     func fetchAllCourses() async -> [Course] {
         return Course.sampleData
     }
 }
 
 class CourseViewModel: ObservableObject {
-    @Published var courses: [AllCourses] = []
+    @Published var courses: [Course] = []
+    
+    let course = AllCourses()
+    
+    func loadCourses() async throws {
+        courses = await course.fetchAllCourses()
+    }
+    
+    init() {
+        Task {
+            try await self.loadCourses()
+        }
+    }
 }

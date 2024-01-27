@@ -167,8 +167,8 @@
 		C4AA8BF12B5A7618002FBD86 /* CoursesViews */ = {
 			isa = PBXGroup;
 			children = (
-				C440A7A12B598F2100935A47 /* CourseView.swift */,
 				C404F9322B57F27600898F99 /* CoursesListView.swift */,
+				C440A7A12B598F2100935A47 /* CourseView.swift */,
 				C440A7A52B59903B00935A47 /* ChapterView.swift */,
 			);
 			path = CoursesViews;

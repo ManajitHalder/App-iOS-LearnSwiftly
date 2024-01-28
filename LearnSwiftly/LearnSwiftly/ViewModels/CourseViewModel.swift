@@ -26,4 +26,10 @@ class CourseViewModel: ObservableObject {
             try await self.loadCourses()
         }
     }
+    
+//    COURSE
+    func updateCourseStatus(status: CourseStatus) {
+        //self.updateCourseStatus(status: status)
+        
+    }
 }

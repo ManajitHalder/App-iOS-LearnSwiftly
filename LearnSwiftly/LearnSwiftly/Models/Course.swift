@@ -27,16 +27,48 @@ struct Course: Identifiable {
     var logo: String
     var description: String
     var status: CourseStatus
+    var statusColor: String
     var content: [[Chapter: Content]]
     
-    init(id: UUID = UUID(), title: String, logo: String, description: String, status: CourseStatus, content: [[Chapter : Content]]) {
+    init(id: UUID = UUID(), title: String, logo: String, description: String, status: CourseStatus, statusColor: String, content: [[Chapter : Content]]) {
         self.id = id
         self.title = title
         self.logo = logo
         self.description = description
         self.status = status
+        self.statusColor = statusColor
         self.content = []
     }
+    
+    func isEnrolled() -> Bool {
+        return self.status == .enrolled ? true : false
+    }
+    
+    func isInprogress() -> Bool {
+        return self.status == .inProgress ? true : false
+    }
+    
+    func isCompleted() -> Bool {
+        self.status == .completed ? true : false
+    }
+    
+    mutating func setStatusColor(status: CourseStatus) {
+        switch status {
+        case .notEnrolled:
+            self.statusColor = "redColor"
+        case .enrolled:
+            self.statusColor = "orangeColor"
+        case .inProgress:
+            self.statusColor = "lightGreenColor"
+        case .completed:
+            self.statusColor = "greenColor"
+        }
+    }
+    mutating func updateCourseStatus(status: CourseStatus) {
+        self.status = status
+        setStatusColor(status: status)
+    }
+   
 }
 
 extension Course {
@@ -46,6 +78,7 @@ extension Course {
             logo: "person.text.rectangle",
             description: "Learn programming in Swift for developing apps for iOS, iPadOS, MacOS and other Apple platforms.",
             status: CourseStatus.notEnrolled,
+            statusColor: "redColor",
             content: [[Chapter.chapter11 : Content.content11],
                       [Chapter.chapter12 : Content.content12],
                       [Chapter.chapter13 : Content.content13],
@@ -59,7 +92,8 @@ extension Course {
             title: "JavaScript Programming Basics",
             logo: "globe.central.south.asia.fill",
             description: "Learn programming in JavaScript for developing apps for Web Developemnt for MacOS and Windows platforms.",
-            status: CourseStatus.notEnrolled,
+            status: CourseStatus.enrolled,
+            statusColor: "orangeColor",
             content: [[Chapter.chapter11 : Content.content11],
                       [Chapter.chapter12 : Content.content12],
                       [Chapter.chapter13 : Content.content13],
@@ -74,6 +108,7 @@ extension Course {
             logo: "sun.dust.circle.fill",
             description: "Learn programming in HTML and CSS for developing apps for Web Developemnt for MacOS and Windows platforms.",
             status: CourseStatus.notEnrolled,
+            statusColor: "redColor",
             content: [[Chapter.chapter11 : Content.content11],
                       [Chapter.chapter12 : Content.content12],
                       [Chapter.chapter13 : Content.content13],
@@ -88,6 +123,7 @@ extension Course {
             logo: "sparkles",
             description: "Programming using Generation AI tools and Softwares. Chat GPT and Chat Bot in iOS Application.",
             status: CourseStatus.notEnrolled,
+            statusColor: "redColor",
             content: [[Chapter.chapter11 : Content.content11],
                       [Chapter.chapter12 : Content.content12],
                       [Chapter.chapter13 : Content.content13],

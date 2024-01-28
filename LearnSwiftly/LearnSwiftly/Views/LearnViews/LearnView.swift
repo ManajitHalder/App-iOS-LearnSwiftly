@@ -45,12 +45,16 @@ struct LearnView: View {
                 ScrollView {
                     VStack {
                         ForEach(courseViewModel.courses) { course in
-                            CourseView(
-                                logo: course.logo,
-                                title: course.title,
-                                description: course.description)
+                            if course.isEnrolled() {
+                                CourseView(
+                                    logo: course.logo,
+                                    title: course.title,
+                                    description: course.description,
+                                    statusColor: "green")
+                            }
                         }
                     }
+                    .padding(.bottom, 100)
                 }
                 Spacer()
             }

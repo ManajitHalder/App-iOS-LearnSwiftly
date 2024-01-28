@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct CoursesListView: View {
-    @ObservedObject private var courseViewModel = CourseViewModel()
+    @StateObject private var courseViewModel = CourseViewModel()
     
     var body: some View {
         LinearGradient(
@@ -42,12 +42,17 @@ struct CoursesListView: View {
                 ScrollView {
                     VStack {
                         ForEach(courseViewModel.courses) { course in
+                            if course.isEnrolled() {
+                                
+                            }
                             CourseView(
                                 logo: course.logo,
                                 title: course.title,
-                                description: course.description)
+                                description: course.description,
+                                statusColor: course.statusColor)
                         }
                     }
+                    .padding(.bottom, 100)
                 }
                // FooterBar()
             }

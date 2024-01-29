@@ -15,7 +15,7 @@ final class AllCourses {
 class CourseViewModel: ObservableObject {
     @Published var courses: [Course] = []
     
-    let course = AllCourses()
+    var course = AllCourses()
     
     func loadCourses() async throws {
         courses = await course.fetchAllCourses()
@@ -27,9 +27,9 @@ class CourseViewModel: ObservableObject {
         }
     }
     
-//    COURSE
-    func updateCourseStatus(status: CourseStatus) {
-        //self.updateCourseStatus(status: status)
-        
+//    Using Course methods
+    func updateCourseStatus(course: Course, status: CourseStatus) {
+        var updatedCourse = course
+        updatedCourse.updateStatus(status: status)
     }
 }

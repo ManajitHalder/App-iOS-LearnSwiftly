@@ -1,5 +1,5 @@
 //
-//  ChapterView.swift
+//  CoursesListView.swift
 //  
 //  Created by Manajit Halder on 17/01/24 using Swift 5.0 on MacOS 13.6
 //  
@@ -21,12 +21,6 @@ struct CoursesListView: View {
             VStack {
                 HeaderBar()
                 
-//                Spacer()
-//
-//                Text("Welcome to Enrolled View")
-//                    .font(.largeTitle)
-//                    .foregroundColor(.white)
-//
                 HStack {
                     Text("All Courses")
                         .font(.title2)
@@ -49,7 +43,8 @@ struct CoursesListView: View {
                                 logo: course.logo,
                                 title: course.title,
                                 description: course.description,
-                                statusColor: course.statusColor)
+                                statusColor: course.statusColor
+                            )
                         }
                     }
                     .padding(.bottom, 100)

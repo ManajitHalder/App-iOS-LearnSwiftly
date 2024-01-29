@@ -75,7 +75,8 @@ struct CourseView: View {
 
                     Button {
                         // Enroll the Course
-                        courseViewModel.updateCourseStatus(status: .enrolled)
+//                        courseViewModel.updateCourseStatus(course: Self, status: .enrolled)
+//                        courseViewModel.updateCourseStatus(course: <#T##Course#>, status: <#T##CourseStatus#>)
                     } label: {
                         Image(systemName: "cart.fill.badge.plus")
                             .foregroundColor(.white)
@@ -83,7 +84,7 @@ struct CourseView: View {
                     
                     Button {
                         // Unenroll the Course
-                        courseViewModel.updateCourseStatus(status: .notEnrolled)
+//                        courseViewModel.updateCourseStatus(status: .notEnrolled)
                     } label: {
                         Image(systemName: "cart.fill.badge.minus")
                             .foregroundColor(.white)

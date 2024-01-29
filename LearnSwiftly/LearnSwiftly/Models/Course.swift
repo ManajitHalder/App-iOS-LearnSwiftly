@@ -30,7 +30,7 @@ struct Course: Identifiable {
     var statusColor: String
     var content: [[Chapter: Content]]
     
-    init(id: UUID = UUID(), title: String, logo: String, description: String, status: CourseStatus, statusColor: String, content: [[Chapter : Content]]) {
+    init(id: UUID = UUID(), title: String = "", logo: String = "", description: String = "", status: CourseStatus = .notEnrolled, statusColor: String = "", content: [[Chapter : Content]] = []) {
         self.id = id
         self.title = title
         self.logo = logo
@@ -64,7 +64,7 @@ struct Course: Identifiable {
             self.statusColor = "greenColor"
         }
     }
-    mutating func updateCourseStatus(status: CourseStatus) {
+    mutating func updateStatus(status: CourseStatus) {
         self.status = status
         setStatusColor(status: status)
     }

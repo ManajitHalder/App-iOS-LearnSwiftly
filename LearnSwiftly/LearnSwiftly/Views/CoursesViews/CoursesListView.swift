@@ -36,15 +36,20 @@ struct CoursesListView: View {
                 ScrollView {
                     VStack {
                         ForEach(courseViewModel.courses) { course in
-                            if course.isEnrolled() {
-                                
+                            if course.isNotenrolled || course.isCompleted() {
+                                CourseView(
+                                    logo: course.logo,
+                                    title: course.title,
+                                    description: course.description,
+                                    statusColor: course.statusColor,
+                                    onEnrollButtonTap: {
+                                        courseViewModel.updateCourseStatus(course: course, status: .enrolled)
+                                    }
+//                                    onUnenrollButtonTap: {
+//                                        courseViewModel.updateCourseStatus(course: course, status: .notEnrolled)
+//                                    }
+                                )
                             }
-                            CourseView(
-                                logo: course.logo,
-                                title: course.title,
-                                description: course.description,
-                                statusColor: course.statusColor
-                            )
                         }
                     }
                     .padding(.bottom, 100)

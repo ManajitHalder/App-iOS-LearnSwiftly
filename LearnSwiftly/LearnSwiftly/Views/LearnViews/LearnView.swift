@@ -50,7 +50,11 @@ struct LearnView: View {
                                     logo: course.logo,
                                     title: course.title,
                                     description: course.description,
-                                    statusColor: "green")
+                                    statusColor: course.statusColor,
+                                    onUnenrollButtonTap: {
+                                        courseViewModel.updateCourseStatus(course: course, status: .notEnrolled)
+                                    }
+                                )
                             }
                         }
                     }

@@ -14,6 +14,11 @@ struct CourseView: View {
     let description: String
     let statusColor: String
     
+    // Closure to be executed when the "Enroll" button is tapped
+    var onEnrollButtonTap: (() -> Void)?
+    // Closure to be executed when the "Unenroll" button is tapped
+    var onUnenrollButtonTap: (() -> Void)?
+    
     var body: some View {
         
         NavigationLink(destination: ChapterView()) {
@@ -75,8 +80,10 @@ struct CourseView: View {
 
                     Button {
                         // Enroll the Course
-//                        courseViewModel.updateCourseStatus(course: Self, status: .enrolled)
-//                        courseViewModel.updateCourseStatus(course: <#T##Course#>, status: <#T##CourseStatus#>)
+                        if let onEnrollButtonTap = onEnrollButtonTap {
+                            // Call the closure when the "Enroll" button is tapped
+                            onEnrollButtonTap()
+                        }
                     } label: {
                         Image(systemName: "cart.fill.badge.plus")
                             .foregroundColor(.white)
@@ -84,7 +91,10 @@ struct CourseView: View {
                     
                     Button {
                         // Unenroll the Course
-//                        courseViewModel.updateCourseStatus(status: .notEnrolled)
+                        if let onUnenrollButtonTap = onUnenrollButtonTap {
+                            // Call the closure when the "Unenroll" button is tapped
+                            onUnenrollButtonTap()
+                        }
                     } label: {
                         Image(systemName: "cart.fill.badge.minus")
                             .foregroundColor(.white)

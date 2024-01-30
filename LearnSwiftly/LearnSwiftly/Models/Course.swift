@@ -5,6 +5,7 @@
 //  
 
 import Foundation
+import Combine
 
 enum CourseStatus: String, CaseIterable {
     case notEnrolled
@@ -21,13 +22,13 @@ enum CourseStatus: String, CaseIterable {
     }
 }
 
-struct Course: Identifiable {
-    var id: UUID
+class Course: Identifiable {
+    let id: UUID
     var title: String
     var logo: String
     var description: String
     var status: CourseStatus
-    var statusColor: String
+    @Published var statusColor: String
     var content: [[Chapter: Content]]
     
     init(id: UUID = UUID(), title: String = "", logo: String = "", description: String = "", status: CourseStatus = .notEnrolled, statusColor: String = "", content: [[Chapter : Content]] = []) {
@@ -52,7 +53,11 @@ struct Course: Identifiable {
         self.status == .completed ? true : false
     }
     
-    mutating func setStatusColor(status: CourseStatus) {
+    var isNotenrolled: Bool {
+        self.status == .notEnrolled ? true : false
+    }
+    
+    func setStatusColor(status: CourseStatus) {
         switch status {
         case .notEnrolled:
             self.statusColor = "redColor"
@@ -64,7 +69,8 @@ struct Course: Identifiable {
             self.statusColor = "greenColor"
         }
     }
-    mutating func updateStatus(status: CourseStatus) {
+    
+    func updateStatus(status: CourseStatus) {
         self.status = status
         setStatusColor(status: status)
     }

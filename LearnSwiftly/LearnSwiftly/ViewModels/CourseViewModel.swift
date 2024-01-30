@@ -5,9 +5,10 @@
 //  
 
 import Foundation
+import Combine
 
 final class AllCourses {
-    func fetchAllCourses() async -> [Course] {
+    func fetchAllCourses() async throws -> [Course] {
         return Course.sampleData
     }
 }
@@ -15,10 +16,30 @@ final class AllCourses {
 class CourseViewModel: ObservableObject {
     @Published var courses: [Course] = []
     
+    var cancellables: Set<AnyCancellable> = []
+    
     var course = AllCourses()
     
     func loadCourses() async throws {
-        courses = await course.fetchAllCourses()
+        do {
+            let fetchedCourses = try await course.fetchAllCourses()
+            
+            DispatchQueue.main.async {
+                self.courses = fetchedCourses
+                
+                // Subscribe to changes in statusColor for each course
+                self.courses.forEach { course in
+                    course.$statusColor
+                        .receive(on: DispatchQueue.main) // Ensure updates occur on the main thread
+                        .sink { [weak self] _ in
+                            self?.objectWillChange.send()
+                        }
+                        .store(in: &self.cancellables)
+                }
+            }
+        } catch {
+            print("error in loadCourses method.")
+        }
     }
     
     init() {
@@ -29,7 +50,12 @@ class CourseViewModel: ObservableObject {
     
 //    Using Course methods
     func updateCourseStatus(course: Course, status: CourseStatus) {
-        var updatedCourse = course
+        let updatedCourse = course
         updatedCourse.updateStatus(status: status)
+        
+        // Assuming courses is an array of ObservableObject
+        if let index = courses.firstIndex(where: {$0.id == updatedCourse.id }) {
+            courses[index] = updatedCourse
+        }
     }
 }

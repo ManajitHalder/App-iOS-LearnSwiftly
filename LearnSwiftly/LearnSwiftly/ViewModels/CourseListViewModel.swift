@@ -1,5 +1,5 @@
 //
-//  CourseViewModel.swift
+//  CourseListViewModel.swift
 //  
 //  Created by Manajit Halder on 24/01/24 using Swift 5.0 on MacOS 13.6
 //  
@@ -13,8 +13,10 @@ final class AllCourses {
     }
 }
 
-class CourseViewModel: ObservableObject {
+class CourseListViewModel: ObservableObject {
     @Published var courses: [Course] = []
+//    @Published var chapters: [Chapter] = []
+//    @Published var contents: [Content] = []
     
     var cancellables: Set<AnyCancellable> = []
     

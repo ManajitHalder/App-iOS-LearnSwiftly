@@ -13,19 +13,30 @@ enum ChapterStatus: String, CaseIterable {
     case completed = "Completed"
 }
 
-struct Chapter: Identifiable, Hashable {
+struct Chapter: Identifiable, Hashable, Equatable {
     let id: UUID
     var name: String
     var summary: String
     var status: ChapterStatus
     var chapterIndex: Int
+    var contents: [Content]
     
-    init(id: UUID = UUID(), name: String, summary: String, status: ChapterStatus, chapterIndex: Int) {
+    init(id: UUID = UUID(), name: String, summary: String, status: ChapterStatus, chapterIndex: Int, contents: [Content] = []) {
         self.id = id
         self.name = name
         self.summary = summary
         self.status = status
         self.chapterIndex = chapterIndex
+        self.contents = contents
+    }
+    
+    static func == (lhs: Chapter, rhs: Chapter) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    // Implement the hash(into:) method for 'Hashable'
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }
 

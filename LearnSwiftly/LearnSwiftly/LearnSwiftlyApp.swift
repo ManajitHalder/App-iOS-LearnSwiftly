@@ -13,7 +13,6 @@ struct LearnSwiftlyApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                
                 if hasSeenOnboarding {
                     MainView()
                 } else {

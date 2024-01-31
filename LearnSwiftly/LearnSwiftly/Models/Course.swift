@@ -29,16 +29,20 @@ class Course: Identifiable {
     var description: String
     var status: CourseStatus
     @Published var statusColor: String
-    var content: [[Chapter: Content]]
+    var likeCount: Int
+    //var content: [[Chapter: Content]]
+    var chapters: [Chapter]
     
-    init(id: UUID = UUID(), title: String = "", logo: String = "", description: String = "", status: CourseStatus = .notEnrolled, statusColor: String = "", content: [[Chapter : Content]] = []) {
+    init(id: UUID = UUID(), title: String, logo: String, description: String, status: CourseStatus, statusColor: String, likeCount: Int = 0, chapters: [Chapter] = []) {
         self.id = id
         self.title = title
         self.logo = logo
         self.description = description
         self.status = status
         self.statusColor = statusColor
-        self.content = []
+        self.likeCount = likeCount
+//        self.content = []
+        self.chapters = chapters
     }
     
     func isEnrolled() -> Bool {
@@ -85,13 +89,14 @@ extension Course {
             description: "Learn programming in Swift for developing apps for iOS, iPadOS, MacOS and other Apple platforms.",
             status: CourseStatus.notEnrolled,
             statusColor: "redColor",
-            content: [[Chapter.chapter11 : Content.content11],
-                      [Chapter.chapter12 : Content.content12],
-                      [Chapter.chapter13 : Content.content13],
-                      [Chapter.chapter21 : Content.content21],
-                      [Chapter.chapter22 : Content.content22],
-                      [Chapter.chapter23 : Content.content23]
-                     ]
+//            content: [[Chapter.chapter11 : Content.content11],
+//                      [Chapter.chapter12 : Content.content12],
+//                      [Chapter.chapter13 : Content.content13],
+//                      [Chapter.chapter21 : Content.content21],
+//                      [Chapter.chapter22 : Content.content22],
+//                      [Chapter.chapter23 : Content.content23]
+//                     ],
+            chapters: [Chapter.chapter11, Chapter.chapter12, Chapter.chapter13]
     )
     
     static let course2 = Course(
@@ -100,13 +105,14 @@ extension Course {
             description: "Learn programming in JavaScript for developing apps for Web Developemnt for MacOS and Windows platforms.",
             status: CourseStatus.enrolled,
             statusColor: "orangeColor",
-            content: [[Chapter.chapter11 : Content.content11],
-                      [Chapter.chapter12 : Content.content12],
-                      [Chapter.chapter13 : Content.content13],
-                      [Chapter.chapter21 : Content.content21],
-                      [Chapter.chapter22 : Content.content22],
-                      [Chapter.chapter23 : Content.content23]
-                     ]
+//            content: [[Chapter.chapter11 : Content.content11],
+//                      [Chapter.chapter12 : Content.content12],
+//                      [Chapter.chapter13 : Content.content13],
+//                      [Chapter.chapter21 : Content.content21],
+//                      [Chapter.chapter22 : Content.content22],
+//                      [Chapter.chapter23 : Content.content23]
+//                     ],
+            chapters: [Chapter.chapter21, Chapter.chapter22, Chapter.chapter23]
     )
     
     static let course3 = Course(
@@ -115,13 +121,14 @@ extension Course {
             description: "Learn programming in HTML and CSS for developing apps for Web Developemnt for MacOS and Windows platforms.",
             status: CourseStatus.notEnrolled,
             statusColor: "redColor",
-            content: [[Chapter.chapter11 : Content.content11],
-                      [Chapter.chapter12 : Content.content12],
-                      [Chapter.chapter13 : Content.content13],
-                      [Chapter.chapter21 : Content.content21],
-                      [Chapter.chapter22 : Content.content22],
-                      [Chapter.chapter23 : Content.content23]
-                     ]
+//            content: [[Chapter.chapter11 : Content.content11],
+//                      [Chapter.chapter12 : Content.content12],
+//                      [Chapter.chapter13 : Content.content13],
+//                      [Chapter.chapter21 : Content.content21],
+//                      [Chapter.chapter22 : Content.content22],
+//                      [Chapter.chapter23 : Content.content23]
+//                     ],
+            chapters: [Chapter.chapter31, Chapter.chapter32, Chapter.chapter33]
     )
     
     static let course4 = Course(
@@ -130,13 +137,14 @@ extension Course {
             description: "Programming using Generation AI tools and Softwares. Chat GPT and Chat Bot in iOS Application.",
             status: CourseStatus.notEnrolled,
             statusColor: "redColor",
-            content: [[Chapter.chapter11 : Content.content11],
-                      [Chapter.chapter12 : Content.content12],
-                      [Chapter.chapter13 : Content.content13],
-                      [Chapter.chapter21 : Content.content21],
-                      [Chapter.chapter22 : Content.content22],
-                      [Chapter.chapter23 : Content.content23]
-                     ]
+//            content: [[Chapter.chapter11 : Content.content11],
+//                      [Chapter.chapter12 : Content.content12],
+//                      [Chapter.chapter13 : Content.content13],
+//                      [Chapter.chapter21 : Content.content21],
+//                      [Chapter.chapter22 : Content.content22],
+//                      [Chapter.chapter23 : Content.content23]
+//                     ]
+            chapters: [Chapter.chapter31, Chapter.chapter32, Chapter.chapter33]
     )
     
     static let sampleData: [Course] = [course1, course2, course3, course4]

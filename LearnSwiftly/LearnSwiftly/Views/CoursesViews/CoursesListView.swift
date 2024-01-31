@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct CoursesListView: View {
-    @StateObject private var courseViewModel = CourseViewModel()
+    @StateObject var courseListViewModel = CourseListViewModel()
     
     var body: some View {
         LinearGradient(
@@ -35,21 +35,26 @@ struct CoursesListView: View {
                 
                 ScrollView {
                     VStack {
-                        ForEach(courseViewModel.courses) { course in
-                            if course.isNotenrolled || course.isCompleted() {
+                        ForEach(courseListViewModel.courses) { course in
+                            NavigationLink(destination: ChapterListView(chapters: course.chapters)) {
                                 CourseView(
                                     logo: course.logo,
                                     title: course.title,
                                     description: course.description,
                                     statusColor: course.statusColor,
                                     onEnrollButtonTap: {
-                                        courseViewModel.updateCourseStatus(course: course, status: .enrolled)
+                                        courseListViewModel.updateCourseStatus(course: course, status: .enrolled)
                                     }
 //                                    onUnenrollButtonTap: {
-//                                        courseViewModel.updateCourseStatus(course: course, status: .notEnrolled)
+//                                        courseListViewModel.updateCourseStatus(course: course, status: .notEnrolled)
+//                                    }
+//                                    onLikeCourseOnTap: {
+//                                        courseListViewModel.likeCourse(course: Course, like: likeCount)
 //                                    }
                                 )
+
                             }
+                            .navigationTitle("Title")
                         }
                     }
                     .padding(.bottom, 100)

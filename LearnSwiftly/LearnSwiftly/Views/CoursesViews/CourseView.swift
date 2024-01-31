@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct CourseView: View {
-    @ObservedObject private var courseViewModel = CourseViewModel()
+    @ObservedObject private var courseViewModel = CourseListViewModel()
     
     let logo: String
     let title: String
@@ -18,10 +18,12 @@ struct CourseView: View {
     var onEnrollButtonTap: (() -> Void)?
     // Closure to be executed when the "Unenroll" button is tapped
     var onUnenrollButtonTap: (() -> Void)?
+    // Closure to be executed when the Course is liked on like thumb tap
+    var onLikeCourseOnTap: (() -> Void)?
     
     var body: some View {
         
-        NavigationLink(destination: ChapterView()) {
+//        NavigationLink(destination: ChapterView()) {
             VStack(spacing: 0) {
                 HStack(spacing: 0) {
                     RoundedRectangle(cornerRadius: 2)
@@ -73,11 +75,15 @@ struct CourseView: View {
                 HStack {
                     Button {
                         // Like the Course
+                        if let onLikeCourseOnTap = onLikeCourseOnTap {
+                            onLikeCourseOnTap()
+                        }
                     } label: {
-                        Image(systemName: "heart.fill")
+                        Image(systemName: "heart")
                             .foregroundColor(.white)
                     }
 
+                    Spacer()
                     Button {
                         // Enroll the Course
                         if let onEnrollButtonTap = onEnrollButtonTap {
@@ -88,7 +94,7 @@ struct CourseView: View {
                         Image(systemName: "cart.fill.badge.plus")
                             .foregroundColor(.white)
                     }
-                    
+                    Spacer()
                     Button {
                         // Unenroll the Course
                         if let onUnenrollButtonTap = onUnenrollButtonTap {
@@ -100,11 +106,14 @@ struct CourseView: View {
                             .foregroundColor(.white)
                     }
                 }
-                .frame(height: 25)
-                .background(.black)
-                .padding([.bottom, .leading, .trailing], 10)
+                .frame(maxWidth: 500)
+                .frame(height: 30)
+//                .background(.black)
+                .padding(.top, 5)
+                .padding(.bottom, 10)
+                .padding([.leading, .trailing], 30)
             }
-        }
+//        }
     }
 }
 

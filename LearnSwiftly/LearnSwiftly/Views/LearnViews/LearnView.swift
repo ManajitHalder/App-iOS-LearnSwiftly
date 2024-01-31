@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct LearnView: View {
-    @ObservedObject private var courseViewModel = CourseViewModel()
+    @ObservedObject private var courseListViewModel = CourseListViewModel()
     
     var body: some View {
         LinearGradient(
@@ -44,17 +44,19 @@ struct LearnView: View {
                 
                 ScrollView {
                     VStack {
-                        ForEach(courseViewModel.courses) { course in
+                        ForEach(courseListViewModel.courses) { course in
                             if course.isEnrolled() {
-                                CourseView(
-                                    logo: course.logo,
-                                    title: course.title,
-                                    description: course.description,
-                                    statusColor: course.statusColor,
-                                    onUnenrollButtonTap: {
-                                        courseViewModel.updateCourseStatus(course: course, status: .notEnrolled)
-                                    }
-                                )
+                                NavigationLink(destination: ChapterListView(chapters: course.chapters)) {
+                                    CourseView(
+                                        logo: course.logo,
+                                        title: course.title,
+                                        description: course.description,
+                                        statusColor: course.statusColor,
+                                        onUnenrollButtonTap: {
+                                            courseListViewModel.updateCourseStatus(course: course, status: .notEnrolled)
+                                        }
+                                    )
+                                }
                             }
                         }
                     }

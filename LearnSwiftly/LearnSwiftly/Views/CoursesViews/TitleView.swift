@@ -10,12 +10,15 @@ struct TitleView: View {
     let title: String
     
     var body: some View {
-        Text(title)
-            .font(.custom("Cochin", size: 25))
-            .fontWeight(.bold)
-            .fontDesign(.rounded)
-            .foregroundColor(.black)
-            .padding(.bottom, 20)
+        HStack {
+            Text(title)
+                .font(.custom("Cochin", size: 25))
+                .fontWeight(.bold)
+                .fontDesign(.rounded)
+                .foregroundColor(.black)
+                .padding(.top, 30)
+                .padding(.bottom, 20)
+        }
     }
 }
 

@@ -7,13 +7,24 @@
 import SwiftUI
 
 struct QuizView: View {
+    let quiz: Quiz
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(quiz.question)
+            
+            ForEach(quiz.options, id: \.self) { option in
+                Text(option)
+            }
+            
+            
+        }
+        .padding()
     }
 }
 
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizView()
+        QuizView(quiz: Quiz(isCorrect: false))
     }
 }

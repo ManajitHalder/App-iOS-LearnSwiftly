@@ -58,6 +58,7 @@ struct CodeView: View {
             }
         }
         .padding(.top, 10)
+        .padding(.leading, 10)
     }
 }
 

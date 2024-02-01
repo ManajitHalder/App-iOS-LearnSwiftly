@@ -10,10 +10,14 @@ struct TextView: View {
     let text: String
     
     var body: some View {
-        Text(text)
-            .font(.body)
-            .background(.white)
-            .foregroundColor(.black)
+        HStack {
+            Text(text)
+                .font(.body)
+                .background(.white)
+                .foregroundColor(.black)
+                .padding(.bottom, 10)
+                .padding(.leading, 10)
+        }
     }
 }
 

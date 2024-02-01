@@ -36,6 +36,7 @@
 		C4BA5D982B6BACAA00CE95FA /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BA5D972B6BACAA00CE95FA /* TitleView.swift */; };
 		C4BA5D9A2B6BACE700CE95FA /* SubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BA5D992B6BACE700CE95FA /* SubtitleView.swift */; };
 		C4BA5D9C2B6BAD2D00CE95FA /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BA5D9B2B6BAD2D00CE95FA /* QuizView.swift */; };
+		C4BA5D9E2B6BB46200CE95FA /* ChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BA5D9D2B6BB46200CE95FA /* ChapterView.swift */; };
 		C4C54D032B6AAD81006F3FE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C54D022B6AAD81006F3FE6 /* ContentView.swift */; };
 		C4F7ABCD2B5D321E0014B985 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7ABCC2B5D321D0014B985 /* Course.swift */; };
 		C4F7ABCF2B5D33610014B985 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7ABCE2B5D33610014B985 /* Chapter.swift */; };
@@ -74,6 +75,7 @@
 		C4BA5D972B6BACAA00CE95FA /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		C4BA5D992B6BACE700CE95FA /* SubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleView.swift; sourceTree = "<group>"; };
 		C4BA5D9B2B6BAD2D00CE95FA /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		C4BA5D9D2B6BB46200CE95FA /* ChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterView.swift; sourceTree = "<group>"; };
 		C4C54D022B6AAD81006F3FE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C4F7ABCC2B5D321D0014B985 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		C4F7ABCE2B5D33610014B985 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				C404F9322B57F27600898F99 /* CoursesListView.swift */,
 				C440A7A12B598F2100935A47 /* CourseView.swift */,
 				C440A7A52B59903B00935A47 /* ChapterListView.swift */,
+				C4BA5D9D2B6BB46200CE95FA /* ChapterView.swift */,
 				C4C54D022B6AAD81006F3FE6 /* ContentView.swift */,
 				C4BA5D972B6BACAA00CE95FA /* TitleView.swift */,
 				C4BA5D992B6BACE700CE95FA /* SubtitleView.swift */,
@@ -320,6 +323,7 @@
 				C4C54D032B6AAD81006F3FE6 /* ContentView.swift in Sources */,
 				C404F9362B58149F00898F99 /* FooterBar.swift in Sources */,
 				C476FF502B63B703003E74C8 /* Quiz.swift in Sources */,
+				C4BA5D9E2B6BB46200CE95FA /* ChapterView.swift in Sources */,
 				C4AA8BFE2B5AC2AF002FBD86 /* UpgradeToProSheetView.swift in Sources */,
 				C4F7ABCF2B5D33610014B985 /* Chapter.swift in Sources */,
 				C4BA5D982B6BACAA00CE95FA /* TitleView.swift in Sources */,

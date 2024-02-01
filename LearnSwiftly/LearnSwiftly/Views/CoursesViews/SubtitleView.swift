@@ -10,11 +10,19 @@ struct SubtitleView: View {
     let subtitle: String
     
     var body: some View {
-        Text(subtitle)
-            .font(.custom("Cochin", size: 20))
-            .fontWeight(.semibold)
-            .fontDesign(.rounded)
-            .foregroundColor(.black)
+        HStack(spacing: 5) {
+            Image(systemName: "heart.fill")
+                .foregroundColor(.pink)
+            
+            Text(subtitle)
+                .font(.custom("Cochin", size: 20))
+                .fontWeight(.semibold)
+                .fontDesign(.rounded)
+                .foregroundColor(.black)
+            
+            Spacer()
+        }
+        .padding(.bottom, 10)
     }
 }
 

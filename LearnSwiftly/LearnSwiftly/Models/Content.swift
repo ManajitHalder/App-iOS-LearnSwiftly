@@ -76,8 +76,9 @@ extension Content {
     static let content21 = Content(
         title: "Optionals",
         elements: [
-            ContentElement(type: .subtitle("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
-            ContentElement(type: .subtitle("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
+            ContentElement(type: .subtitle("Topic Name 1")),
+            ContentElement(type: .text("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
+            ContentElement(type: .text("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
             ContentElement(type: .code("print()\nprint\nprint\n"))
         ],
         quiz: Quiz.sampleQuiz)
@@ -85,8 +86,9 @@ extension Content {
     static let content22 = Content(
         title: "Closures with examples",
         elements: [
-            ContentElement(type: .subtitle("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
-            ContentElement(type: .subtitle("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
+            ContentElement(type: .subtitle("Topic Name 1")),
+            ContentElement(type: .text("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
+            ContentElement(type: .text("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
             ContentElement(type: .code("print()\nprint\nprint\n"))
         ],
         quiz: Quiz.sampleQuiz)
@@ -94,8 +96,10 @@ extension Content {
     static let content23 = Content(
         title: "Multithreading",
         elements: [
-            ContentElement(type: .subtitle("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
-            ContentElement(type: .subtitle("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
+            ContentElement(type: .subtitle("Topic Name 1")),
+            ContentElement(type: .text("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
+            ContentElement(type: .subtitle("Topic Name 2")),
+            ContentElement(type: .text("In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application.")),
             ContentElement(type: .code("print()\nprint\nprint\n"))
         ],
         quiz: Quiz.sampleQuiz)

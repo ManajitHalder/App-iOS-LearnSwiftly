@@ -45,21 +45,24 @@ extension Chapter {
         name: "Introduction to Swift Programming Language",
         summary: "Introdues Swift Programming Language",
         status: ChapterStatus.notStarted,
-        chapterIndex: 1
+        chapterIndex: 1,
+        contents: [Content.content11, Content.content12, Content.content13]
     )
     
     static let chapter12 = Chapter(
         name: "Data Types in Swift",
         summary: "Basice Data Types in Swift programming language",
         status: ChapterStatus.notStarted,
-        chapterIndex: 2
+        chapterIndex: 2,
+        contents: [Content.content11, Content.content12, Content.content13]
     )
     
     static let chapter13 = Chapter(
         name: "Optionals",
         summary: "What are Optional, When to use it.",
         status: ChapterStatus.notStarted,
-        chapterIndex: 3
+        chapterIndex: 3,
+        contents: [Content.content11, Content.content12, Content.content13]
     )
     
     
@@ -67,41 +70,47 @@ extension Chapter {
         name: "Introduction to Swift Programming Language",
         summary: "Introdues Swift Programming Language",
         status: ChapterStatus.notStarted,
-        chapterIndex: 1
+        chapterIndex: 1,
+        contents: [Content.content21, Content.content22, Content.content23]
     )
     
     static let chapter22 = Chapter(
         name: "Data Types in Swift",
         summary: "Basice Data Types in Swift programming language",
         status: ChapterStatus.notStarted,
-        chapterIndex: 2
+        chapterIndex: 2,
+        contents: [Content.content21, Content.content22, Content.content23]
     )
     
     static let chapter23 = Chapter(
         name: "Optionals",
         summary: "What are Optional, When to use it.",
         status: ChapterStatus.notStarted,
-        chapterIndex: 3
+        chapterIndex: 3,
+        contents: [Content.content21, Content.content22, Content.content23]
     )
     
     static let chapter31 = Chapter(
         name: "Introduction to Swift Programming Language",
         summary: "Introdues Swift Programming Language",
         status: ChapterStatus.notStarted,
-        chapterIndex: 1
+        chapterIndex: 1,
+        contents: [Content.content11, Content.content22, Content.content23]
     )
     
     static let chapter32 = Chapter(
         name: "Data Types in Swift",
         summary: "Basice Data Types in Swift programming language",
         status: ChapterStatus.notStarted,
-        chapterIndex: 2
+        chapterIndex: 2,
+        contents: [Content.content11, Content.content22, Content.content23]
     )
     
     static let chapter33 = Chapter(
         name: "Optionals",
         summary: "What are Optional, When to use it.",
         status: ChapterStatus.notStarted,
-        chapterIndex: 3
+        chapterIndex: 3,
+        contents: [Content.content11, Content.content22, Content.content23]
     )
 }

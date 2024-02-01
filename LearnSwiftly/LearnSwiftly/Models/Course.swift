@@ -129,6 +129,7 @@ extension Course {
 //                      [Chapter.chapter23 : Content.content23]
 //                     ],
             chapters: [Chapter.chapter31, Chapter.chapter32, Chapter.chapter33]
+            
     )
     
     static let course4 = Course(
@@ -148,4 +149,5 @@ extension Course {
     )
     
     static let sampleData: [Course] = [course1, course2, course3, course4]
+    
 }

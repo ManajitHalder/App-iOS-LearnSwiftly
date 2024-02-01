@@ -8,12 +8,47 @@ import SwiftUI
 
 struct ContentView: View {
     let contents: [Content]
+    @Environment(\.presentationMode) var presentationMode
+    
+//    @State var title: String
     
     var body: some View {
         List(contents) { content in
-            Text("\(content.numberOfQuiz)")
-                .foregroundColor(.black)
+            TitleView(title: content.title)
+            
+            ForEach(content.elements) { element in
+                switch element.type {
+                case .subtitle(let subtitle):
+                    SubtitleView(subtitle: subtitle)
+
+                case .text(let text):
+                    TextView(text: text)
+                    
+                case .code(let code):
+                    CodeView(languageName: "swift", code: code)
+                    
+                case .image(let image):
+                    Text(image)
+                }
+            }
+            
+//            ForEach(content.quiz) { quiz in
+//                if quiz.showQuiz == true {
+//                    
+//                }
+//            }
         }
+        .navigationBarItems(
+            leading:
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image(systemName: "xmark")
+                }
+                .padding(.leading, 10)
+        )
+        .navigationBarBackButtonHidden()
+        .navigationTitle("Heading")
     }
 }
 

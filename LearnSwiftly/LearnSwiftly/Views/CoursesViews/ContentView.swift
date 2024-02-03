@@ -35,9 +35,10 @@ struct ContentView: View {
                         }
                     }
                     
-                    ForEach(content.quiz) { quiz in
-                        QuizView(quiz: quiz)
-                    }
+//                    ForEach(content.quiz) { quiz in
+//                        QuizView(quiz: quiz)
+//                    }
+                    QuizView(quiz: Quiz.quiz1)
                 }
             }
             .padding([.leading, .trailing], 20)

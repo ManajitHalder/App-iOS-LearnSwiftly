@@ -67,5 +67,5 @@ extension Quiz {
         answer: 1,
         isCorrect: false)
     
-    static let sampleQuiz: [Quiz] = [quiz1, quiz2, quiz3, quiz4]
+    static let sampleQuiz: [Quiz] = [quiz1]
 }

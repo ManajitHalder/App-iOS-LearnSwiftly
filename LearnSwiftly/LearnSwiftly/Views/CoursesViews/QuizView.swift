@@ -8,6 +8,8 @@ import SwiftUI
 
 struct QuizView: View {
     @State private var optionSelected: Bool = false
+    @State private var buttonClicked: Int = 10
+    @State private var buttonBackground: Color = Color(.gray)
     
     let quiz: Quiz
     @State private var currentIndex: Int = 0
@@ -37,20 +39,32 @@ struct QuizView: View {
                 }
                 .padding(.leading, 40)
                 
-                ForEach(quiz.options, id: \.self) { option in
+                ForEach(quiz.options.indices, id: \.self) { index in
                     Button {
                         optionSelected = true
+//                        if buttonClicked {
+                           // buttonBackground = Color(.green)
+                        buttonClicked = index + 1
+                            
+                        
+                        print(buttonClicked)
+//                        }
                     } label: {
-                        Text(option)
+                        Text(quiz.options[index])
                             .font(.custom("Cochin", size: 20))
                             .multilineTextAlignment(.leading)
                             .foregroundColor(.white)
                     }
                     .frame(width: 300)
                     .padding()
-                    .background(.gray)
+                    .background(buttonBackground)
                     .cornerRadius(20)
                     .padding(.bottom, 10)
+                    .onSubmit {
+//                        changeBackgroundColor()
+//                        buttonClicked = true
+                        buttonBackground = .yellow
+                    }
                 }
                 .padding([.leading, .trailing], 20)
                 
@@ -58,6 +72,11 @@ struct QuizView: View {
                     Spacer()
                     
                     Button {
+                        if buttonClicked == quiz.answer {
+                            print("Correct Answers :)")
+                        } else {
+                            print("Wrong, Try Again!!!")
+                        }
                         if optionSelected == true {
                             print("option selected")
                         } else {
@@ -71,6 +90,20 @@ struct QuizView: View {
                             .background(.black)
                             .cornerRadius(10)
                     }
+//                    .onTapGesture {
+//                        if optionSelected == true {
+//                            print("Continue")
+//                        } else {
+//
+////                            Alert(title: Text("Try Again"), message: Text("S"))
+//                        }
+//                    }
+                    .alert(isPresented: $optionSelected) {
+                        if buttonClicked != quiz.answer {
+                            return Alert(title: Text("Wrong Answer!"), message: nil, dismissButton: .default(Text("Cancel")))
+                        }
+                        return Alert(title: Text(""))
+                    }
                 }
                 .padding(.trailing, 50)
             }
@@ -78,8 +111,11 @@ struct QuizView: View {
         .padding()
     }
     
+    func changeBackgroundColor() {
+        
+    }
+    
 }
-
  
 struct OptionView: View {
     let item: String
@@ -104,13 +140,7 @@ struct OptionView: View {
         .padding()
     }
 }
-                                   
-                                   
-                                   
-                                   
-                                   
-                                   
-                                   
+
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
         QuizView(quiz: Quiz(

@@ -36,25 +36,45 @@ struct ChapterListView: View {
 
                 Spacer()
                 
-                ScrollView {
+//                ScrollView {
                     VStack {
-                        ForEach(chapters) { chapter in
+                        List(chapters) { chapter in
                             NavigationLink(destination: ContentView(contents: chapter.contents)) {
-                                VStack {
-                                    Text("\(chapter.chapterIndex)")
-                                    Text(chapter.name)
-                                    Text(chapter.summary)
-                                    Text("\(chapter.status.rawValue)")
+                                HStack {
+                                    VStack {
+                                        Text("\(chapter.chapterIndex)")
+                                            .font(.custom("Cochin", size: 20))
+                                            .fontWeight(.bold)
+                                        Spacer()
+                                    }
+                                    .padding(.trailing, 10)
+                                    
+                                    VStack {
+                                        HStack {
+                                            Text(chapter.name)
+                                                .font(.custom("Cochin", size: 20))
+                                                .fontWeight(.bold)
+                                            Spacer()
+                                        }
+                                        Spacer()
+                                        HStack {
+                                            Text(chapter.summary)
+                                                .font(.custom("Cochin", size: 20))
+                                                //.fontWeight(.bold)
+                                            Spacer()
+                                        }
+                                        // Text("\(chapter.status.rawValue)")
+                                    }
                                 }
-                                .foregroundColor(.white)
-                                .frame(height: 80)
-                                .background(.yellow)
-                                .padding()
+                                .padding([.leading, .top, .bottom], 20)
+                                .background(.yellow).cornerRadius(20)
                             }
+                            .listRowSeparator(.hidden)
                         }
                     }
                     .padding(.bottom, 100)
-                }
+
+//                }
                // FooterBar()
             }
             .edgesIgnoringSafeArea(.all)

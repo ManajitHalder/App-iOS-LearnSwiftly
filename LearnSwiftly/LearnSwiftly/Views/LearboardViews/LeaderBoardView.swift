@@ -21,7 +21,7 @@ struct LeaderBoardView: View {
                 
                 Spacer()
                 
-                Text("Welcome to Leadger Board View")
+                Text("Welcome to Leader Board View")
                     .font(.largeTitle)
                     .foregroundColor(.white)
                 

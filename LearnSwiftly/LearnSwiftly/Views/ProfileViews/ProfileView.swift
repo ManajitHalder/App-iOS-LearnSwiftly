@@ -14,19 +14,20 @@ struct ProfilePhotoView: View {
         ZStack {
             VStack {
                 ZStack {
-                    Circle()
+                    Rectangle()
                         .frame(width: 190)
                         .foregroundColor(.red)
                     
-                    Circle()
+                    Rectangle()
                         .frame(width: 170)
                          .foregroundColor(.white)
                                         
-                    Image(systemName: "heart.fill")
+//                    Image(systemName: "heart.fill")
+                    Image(uiImage: UIImage(contentsOfFile: "/Volumes/Mojave/Users/reyansh/Data/01 Reyansh/Photos/DSC_1400.JPG")!)
                         .resizable()
-                        .scaledToFit()
-                        .frame(width: 120)
-                        .foregroundColor(.green)
+                        .scaledToFill()
+//                        .frame(width: 120)
+//                        .foregroundColor(.green)
                 }
                 
                 Text("Reyansh Halder")
@@ -34,9 +35,9 @@ struct ProfilePhotoView: View {
                     .font(.custom("Cochin", size: 35))
                     .fontWeight(.bold)
             }
+            .frame(height: 270)
+            .frame(maxWidth: 900)
         }
-        .frame(width: 350, height: 270)
-        .cornerRadius(20)
         .padding()
         .background(.gray)
     }
@@ -47,16 +48,24 @@ struct ScoreView: View {
         LazyVGrid(columns: [
             GridItem(.flexible(minimum: 100)),
             GridItem(.flexible(minimum: 100))
-        ], spacing: 20) {
+        ], spacing: 8) {
             Rectangle()
                 .frame(height: 120)
-            Rectangle().frame(height: 120)
-            Rectangle().frame(height: 120)
-            Rectangle().frame(height: 120)
+            Rectangle()
+                .frame(height: 120)
+            Rectangle()
+                .frame(height: 120)
+            Rectangle()
+                .frame(height: 120)
         }
         .foregroundColor(.gray)
         .cornerRadius(10)
-        .padding(20)
+    }
+}
+
+struct CertificateView: View {
+    var body: some View {
+        Text("Certificate View")
     }
 }
 
@@ -71,20 +80,19 @@ struct ProfileView: View {
 
         .overlay(
             VStack {
-//                HeaderBar()
-//                Spacer()
                 
                 VStack {
-//                    Text("Welcome to Profile View")
-//                        .font(.largeTitle)
-//                        .foregroundColor(.white)
-                    
+                    //HeaderBar()
+
                     ProfilePhotoView(photo: "", name: "")
+                        .padding(.top, 60)
                     
                     ScoreView()
                     
+                    CertificateView()
                 }
-                .padding(.top, 60)
+                .padding()
+                
 
                 
                 Spacer()

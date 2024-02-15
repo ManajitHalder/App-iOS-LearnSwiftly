@@ -141,7 +141,6 @@
 				C4AA8BF12B5A7618002FBD86 /* CoursesViews */,
 				C4AA8BF22B5A7633002FBD86 /* LearboardViews */,
 				C4AA8BF32B5A765F002FBD86 /* ProfileViews */,
-				C440A79F2B598EC700935A47 /* LearningView.swift */,
 				C4AA8BF62B5A76AB002FBD86 /* OnboardingViews */,
 			);
 			path = Views;
@@ -207,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				C404F93B2B582AAE00898F99 /* ProfileView.swift */,
+				C440A79F2B598EC700935A47 /* LearningView.swift */,
 			);
 			path = ProfileViews;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					C403D6AF2B568C9800B351D6 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -383,6 +383,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -443,6 +444,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

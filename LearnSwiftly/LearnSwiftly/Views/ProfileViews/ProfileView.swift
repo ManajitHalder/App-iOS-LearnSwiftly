@@ -26,7 +26,7 @@ struct ProfilePhotoView: View {
                     Image(uiImage: UIImage(contentsOfFile: "/Volumes/Mojave/Users/reyansh/Data/01 Reyansh/Photos/DSC_1400.JPG")!)
                         .resizable()
                         .scaledToFill()
-//                        .frame(width: 120)
+                        .frame(width: 120)
 //                        .foregroundColor(.green)
                 }
                 
@@ -49,14 +49,53 @@ struct ScoreView: View {
             GridItem(.flexible(minimum: 100)),
             GridItem(.flexible(minimum: 100))
         ], spacing: 8) {
-            Rectangle()
-                .frame(height: 120)
-            Rectangle()
-                .frame(height: 120)
-            Rectangle()
-                .frame(height: 120)
-            Rectangle()
-                .frame(height: 120)
+            ZStack {
+                Rectangle()
+                
+                HStack {
+                    Image(systemName: "light.panel.fill")
+                    Text("Score")
+                        .fontWeight(.bold)
+                }
+                .foregroundColor(.yellow)
+            }
+            .frame(height: 120)
+            
+            ZStack {
+                Rectangle()
+                
+                HStack {
+                    Image(systemName: "wineglass.fill")
+                    Text("Cups")
+                        .fontWeight(.bold)
+                }
+                .foregroundColor(.yellow)
+            }
+            .frame(height: 120)
+            
+            ZStack {
+                Rectangle()
+                
+                HStack {
+                    Image(systemName: "medal.fill")
+                    Text("Medals")
+                        .fontWeight(.bold)
+                }
+                .foregroundColor(.yellow)
+            }
+            .frame(height: 120)
+            
+            ZStack {
+                Rectangle()
+                
+                HStack {
+                    Image(systemName: "trophy.fill")
+                    Text("Trophies")
+                        .fontWeight(.bold)
+                }
+                .foregroundColor(.yellow)
+            }
+            .frame(height: 120)
         }
         .foregroundColor(.gray)
         .cornerRadius(10)
@@ -70,6 +109,8 @@ struct CertificateView: View {
 }
 
 struct ProfileView: View {
+    @State private var isPremiumCourseSelected: Bool = false
+    
     var body: some View {
         LinearGradient(
             gradient: Gradient(colors: [Color("screenBackground")]),
@@ -79,27 +120,71 @@ struct ProfileView: View {
         .edgesIgnoringSafeArea(.all)
 
         .overlay(
-            VStack {
-                
+            ScrollView {
                 VStack {
-                    //HeaderBar()
+                    
+                    VStack {
+                        //HeaderBar()
 
-                    ProfilePhotoView(photo: "", name: "")
-                        .padding(.top, 60)
+                        ProfilePhotoView(photo: "", name: "")
+                            .padding(.top, 60)
+                        
+                        ScoreView()
+                        
+                        CertificateView()
+                        
+                        // Premium Course View
+                        ZStack {
+                            Rectangle()
+                            
+                            VStack {
+                                VStack {
+                                    Text("Unlock Premium Courses")
+                                        .font(.title)
+                                        .foregroundColor(.white)
+                                        .multilineTextAlignment(.leading)
+                                    
+                                    Text("Unlock unlimited benefits with premium courses")
+                                        .font(.title3)
+                                        .foregroundColor(.gray)
+                                        .multilineTextAlignment(.leading)
+                                }
+                                
+                                HStack {
+                                    Button {
+                                        isPremiumCourseSelected.toggle()
+                                    } label: {
+                                        Text("Upgrade to Premium")
+                                            .fontWeight(.bold)
+                                    }
+                                    .buttonBorderShape(.automatic)
+                                    .buttonStyle(.borderedProminent)
+                                    .foregroundColor(.white)
+                                    .padding(.bottom, 20)
+                                    
+                                    .sheet(isPresented: $isPremiumCourseSelected) {
+                                        PremiumPaymentSheetView(isPremiumCourseSelected: $isPremiumCourseSelected)
+                                            .foregroundColor(.white)
+                                    }
+                                }
+                            }
+                            .padding()
+                        }
+                        .frame(height: 200)
+                        .foregroundColor(.purple)
+                        .cornerRadius(20)
+                        
+                    }
+                    .padding()
                     
-                    ScoreView()
+
                     
-                    CertificateView()
+                    Spacer()
+
+                   // FooterBar()
                 }
-                .padding()
-                
-
-                
-                Spacer()
-
-               // FooterBar()
+                .edgesIgnoringSafeArea(.all)
             }
-            .edgesIgnoringSafeArea(.all)
         )
     }
 }

@@ -70,7 +70,7 @@ class Course: Identifiable {
         case .inProgress:
             self.statusColor = "lightGreenColor"
         case .completed:
-            self.statusColor = "greenColor"
+            self.statusColor = "greenColor1"
         }
     }
     

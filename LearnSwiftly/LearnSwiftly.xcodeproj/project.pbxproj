@@ -16,6 +16,8 @@
 		C404F9382B5815E700898F99 /* HeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404F9372B5815E700898F99 /* HeaderBar.swift */; };
 		C404F93A2B5823F000898F99 /* LeaderBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404F9392B5823F000898F99 /* LeaderBoardView.swift */; };
 		C404F93C2B582AAE00898F99 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404F93B2B582AAE00898F99 /* ProfileView.swift */; };
+		C42115922B865F330078F80C /* LeaderboardHeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42115912B865F330078F80C /* LeaderboardHeaderBar.swift */; };
+		C42115942B86616C0078F80C /* ProfileViewHeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42115932B86616C0078F80C /* ProfileViewHeaderBar.swift */; };
 		C428825E2B5B8C6F0039984F /* PremiumPaymentSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428825D2B5B8C6F0039984F /* PremiumPaymentSheetView.swift */; };
 		C440A79E2B5949A200935A47 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440A79D2B5949A200935A47 /* MainView.swift */; };
 		C440A7A02B598EC700935A47 /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440A79F2B598EC700935A47 /* LearningView.swift */; };
@@ -54,6 +56,8 @@
 		C404F9372B5815E700898F99 /* HeaderBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBar.swift; sourceTree = "<group>"; };
 		C404F9392B5823F000898F99 /* LeaderBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardView.swift; sourceTree = "<group>"; };
 		C404F93B2B582AAE00898F99 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C42115912B865F330078F80C /* LeaderboardHeaderBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardHeaderBar.swift; sourceTree = "<group>"; };
+		C42115932B86616C0078F80C /* ProfileViewHeaderBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewHeaderBar.swift; sourceTree = "<group>"; };
 		C428825D2B5B8C6F0039984F /* PremiumPaymentSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPaymentSheetView.swift; sourceTree = "<group>"; };
 		C440A79D2B5949A200935A47 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C440A79F2B598EC700935A47 /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
@@ -139,7 +143,7 @@
 				C440A79D2B5949A200935A47 /* MainView.swift */,
 				C4AA8BF02B5A7601002FBD86 /* LearnViews */,
 				C4AA8BF12B5A7618002FBD86 /* CoursesViews */,
-				C4AA8BF22B5A7633002FBD86 /* LearboardViews */,
+				C4AA8BF22B5A7633002FBD86 /* LeaderboardViews */,
 				C4AA8BF32B5A765F002FBD86 /* ProfileViews */,
 				C4AA8BF62B5A76AB002FBD86 /* OnboardingViews */,
 			);
@@ -194,18 +198,20 @@
 			path = CoursesViews;
 			sourceTree = "<group>";
 		};
-		C4AA8BF22B5A7633002FBD86 /* LearboardViews */ = {
+		C4AA8BF22B5A7633002FBD86 /* LeaderboardViews */ = {
 			isa = PBXGroup;
 			children = (
 				C404F9392B5823F000898F99 /* LeaderBoardView.swift */,
+				C42115912B865F330078F80C /* LeaderboardHeaderBar.swift */,
 			);
-			path = LearboardViews;
+			path = LeaderboardViews;
 			sourceTree = "<group>";
 		};
 		C4AA8BF32B5A765F002FBD86 /* ProfileViews */ = {
 			isa = PBXGroup;
 			children = (
 				C404F93B2B582AAE00898F99 /* ProfileView.swift */,
+				C42115932B86616C0078F80C /* ProfileViewHeaderBar.swift */,
 				C440A79F2B598EC700935A47 /* LearningView.swift */,
 			);
 			path = ProfileViews;
@@ -325,6 +331,8 @@
 				C476FF502B63B703003E74C8 /* Quiz.swift in Sources */,
 				C4BA5D9E2B6BB46200CE95FA /* ChapterView.swift in Sources */,
 				C4AA8BFE2B5AC2AF002FBD86 /* UpgradeToProSheetView.swift in Sources */,
+				C42115922B865F330078F80C /* LeaderboardHeaderBar.swift in Sources */,
+				C42115942B86616C0078F80C /* ProfileViewHeaderBar.swift in Sources */,
 				C4F7ABCF2B5D33610014B985 /* Chapter.swift in Sources */,
 				C4BA5D982B6BACAA00CE95FA /* TitleView.swift in Sources */,
 				C4BA5D9A2B6BACE700CE95FA /* SubtitleView.swift in Sources */,

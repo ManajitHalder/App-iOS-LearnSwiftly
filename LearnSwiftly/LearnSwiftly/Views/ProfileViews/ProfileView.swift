@@ -29,6 +29,7 @@ struct ProfilePhotoView: View {
         }
         .padding()
         .background(.gray)
+        .cornerRadius(10)
     }
 }
 
@@ -139,7 +140,7 @@ struct PremiumCourseView: View {
         }
         .frame(height: 200)
         .foregroundColor(.purple)
-        .cornerRadius(20)
+        .cornerRadius(10)
     }
 }
 
@@ -251,7 +252,7 @@ struct InviteFriendView: View {
         }
         .frame(height: 180)
         .foregroundColor(Color.orange)
-        .cornerRadius(20)
+        .cornerRadius(10)
     }
 }
 
@@ -265,36 +266,29 @@ struct ProfileView: View {
         .edgesIgnoringSafeArea(.all)
 
         .overlay(
-            ScrollView {
-                VStack {
-                    
+            VStack {
+                ProfileViewHeaderBar()
+                
+                ScrollView {
                     VStack {
-                        //HeaderBar()
-
                         ProfilePhotoView(photo: "", name: "")
-                            .padding(.top, 60)
                         
                         ScoreView()
-                        
-//                        CertificateView()
-                        
+                                                
                         // Premium Course View
                         PremiumCourseView()
                         
                         // Invite a friend
                         InviteFriendView()
                         
+                        Spacer()
                     }
                     .padding()
-                    
-
-                    
-                    Spacer()
-
-                   // FooterBar()
+                    .padding(.bottom, 100)
                 }
-                .edgesIgnoringSafeArea(.all)
+                   // FooterBar()
             }
+            .edgesIgnoringSafeArea(.all)
         )
     }
 }

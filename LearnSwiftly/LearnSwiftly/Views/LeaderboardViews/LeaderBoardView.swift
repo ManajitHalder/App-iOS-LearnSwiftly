@@ -7,19 +7,42 @@
 import SwiftUI
 
 struct LeaderboardPodiumView: View {
+    let rank: Int
+    let profilePhoto: String
+    let name: String
+    let score: Int
+    
     var body: some View {
         ZStack {
             Rectangle()
             
             HStack {
-                Text("First")
-                Text("Second")
-                Text("Third")
+                Image(systemName: profilePhoto)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 80, height: 70)
+                    .padding(.trailing, 10)
+                    .foregroundColor(Color.red)
+                
+                Text("\(name)")
+                    .font(.title)
+                
+                Spacer()
+                
+                VStack {
+                    Text("Rank: \(rank)")
+                        .multilineTextAlignment(.leading)
+                        .padding(.bottom, 20)
+                    
+                    Text("Score: \(score)")
+                }
             }
             .padding()
+            .cornerRadius(5)
+            .foregroundColor(Color.white)
         }
         .frame(height: 120)
-        .foregroundColor(Color.blue)
+        .foregroundColor(Color.orange)
     }
 }
 
@@ -42,7 +65,6 @@ struct LeaderboardRowView: View {
             
             Spacer()
             Text("\(score)")
-//                .padding(.trailing, 20)
         }
         .foregroundColor(.white)
         .padding([.leading, .trailing], 20)
@@ -62,10 +84,16 @@ struct LeaderBoardView: View {
         .overlay(
             VStack(spacing: 0) {
                 LeaderboardHeaderBar()
-                Divider()
+                
+                Rectangle()
+                    .frame(height: 1)
+                    .foregroundColor(Color.red)
                
-                LeaderboardPodiumView()
-                Divider()
+                LeaderboardPodiumView(rank: 1, profilePhoto: "heart", name: "Reyansh", score: 1021)
+                
+                Rectangle()
+                    .frame(height: 1)
+                    .foregroundColor(Color.red)
                 
                 ScrollView {
                     VStack {

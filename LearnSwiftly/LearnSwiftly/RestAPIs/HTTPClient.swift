@@ -95,7 +95,7 @@ class HttpClient {
         return courseList
     }
     
-    // POST
+    // POST Request
     func postData(object: Course) async throws {
         var request = try await URLRequest(url: courseURL)
         request.httpMethod = HttpMethod.POST.rawValue
@@ -111,7 +111,7 @@ class HttpClient {
         }
     }
     
-    // UPDATE (PUT)
+    // PUT (UPDATE) Request
     func putData(object: Course) async throws {
         var request = try await URLRequest(url: courseURL)
         request.httpMethod = HttpMethod.PUT.rawValue
@@ -125,7 +125,7 @@ class HttpClient {
         }
     }
     
-    // POST, PUT and PATCH TaskItem
+    // POST, PUT and PATCH Request in single method
     func sendData(object: Course, httpMethod: HttpMethod) async throws {
         var request: URLRequest
         if httpMethod.rawValue == "POST" {
@@ -147,7 +147,7 @@ class HttpClient {
         }
     }
     
-    // DELETE
+    // DELETE Request
     func deleteData(with courseID: String) async throws {
         var request = try await URLRequest(url: courseURL.appendingPathComponent("\(courseID)"))
         request.httpMethod = HttpMethod.DELETE.rawValue

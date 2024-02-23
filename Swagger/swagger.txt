@@ -1,0 +1,201 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: "LearnSwiftly: A Programming Language Learning App"
+  description:  |
+        LearnSwiftly is a programming language learning app that offers courses related to 
+        Swift programming language, Swift UI, and iOS app development concepts. 
+        The app features an onboarding screen for first-time users, courses with chapters 
+        and content items, quizzes, leaderboard, profile section, premium option, and more.
+                
+        **Features:**
+        - **Onboarding Screen:** 
+          Users are greeted with an onboarding screen upon their first login or launch of the app. This screen provides an introduction to the app's features and functionalities.
+
+        - **Courses:**
+          LearnSwiftly offers courses related to Swift programming language, Swift UI, and iOS app development concepts. Each course contains a list of chapters, which may initially be empty but will eventually contain content.
+
+        - **Chapters:** 
+          Chapters within each course contain lists of content items. These chapters organize the course material into manageable sections for users to navigate through.
+
+        - **Content Items:** 
+          Content items can include various types such as text, images, code snippets, and quizzes. Quizzes at the end of each content section provide interactive learning experiences for users.
+
+        - **Leaderboard:**
+          Users can view their scores on quizzes in the leaderboard section. This feature promotes competition and motivates users to improve their performance.
+
+        - **Profile:**
+          The profile section allows users to view their learning progress, including scores, completed courses, and achievements. It provides a personalized experience for users to track their learning journey.
+
+        - **Premium Option:** 
+          LearnSwiftly offers a premium option for users who want access to additional features and more course content. Users can unlock premium features by paying a subscription fee or a one-time purchase.
+
+        - **Payment Integration:** 
+          Integration with payment gateways allows users to subscribe to premium features securely within the app.
+
+        - **User Authentication:**
+          Secure user authentication ensures that only registered users can access the app's features. It also allows for personalized experiences and data synchronization across devices.
+
+        - **Data Persistence:** 
+          Data persistence mechanisms store user progress, course content, quiz scores, and other relevant information locally or on a server to ensure continuity of learning experience across sessions and devices.
+
+        - **UI/UX Design:**
+          A user-friendly interface with intuitive navigation and engaging visuals enhances the learning experience and encourages user engagement.
+
+        - **Feedback Mechanism:**
+          Corporating a feedback mechanism enables users to provide input on course content, app features, and overall user experience, allowing for continuous improvement.
+    
+  license:
+    name: MIT
+    url: https://github.com/apiaryio/polls-api/blob/master/LICENSE
+host: courses.apiblueprint.org
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /courses:
+    x-summary: Course List
+    get:
+      description: 
+        List all Courses available for the user. User can enroll for a Course if it is accessible to the user.
+        Free Courses are accessible to all User and to access Premium Courses User need to go for Premium.
+      
+      summary: All Courses
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Course'
+          examples:
+            application/json:
+
+  
+
+definitions:
+  Quiz:
+    title: Quiz
+    type: object
+    properties:
+      id:
+        type: string
+        format: uuid
+      showQuiz: 
+        type: boolean
+      question:
+        type: string
+      options:
+        type: array
+      answer:
+        type: integer
+      responseMessage:
+        type: string
+      isCorrect:
+        type: boolean
+    required:
+      - id
+      - showQuiz
+        
+  ContentElement:
+    title: ContentElement
+    type: object
+    properties:
+      subtitle:
+        type: string
+      text:
+        type: string
+      code:
+        type: string
+      image:
+        type: string
+      
+  Content:
+    title: Content
+    type: object
+    properties:
+      id:
+        type: string
+        format: uuid
+      title:
+        type: string
+      elements:
+        $ref: "#/definitions/ContentElement"
+      quiz:
+        type: array
+        $ref: "#/definitions/Quiz"
+    required:
+      - id
+      - title
+        
+  Chapter:
+    title: Chapter
+    type: object
+    properties:
+      id:
+        type: string
+        format: uuid
+      name:
+        type: string
+      summary:
+        type: string
+      status:
+        type: string
+      chapterIndex:
+        type: integer
+      contents:
+        type: array
+        items:
+          $ref: "#/definitions/Content"
+    required:
+      - id
+      - name
+      - summary
+        
+  CourseStatus:
+    title: CourseStatus
+    type: object
+    properties:
+      notEnabled: 
+        type: string
+      enrolled:
+        type: string
+      inProgress:
+        type: string
+      completed:
+        type: string
+      
+  Course:
+    title: Course
+    type: object
+    properties:
+      id:
+        type: string
+        format: uuid
+      title:
+        type: string
+      logo:
+        type: string
+      description:
+        type: string
+      status:
+        $ref: "#/definitions/CourseStatus"
+      statusColor:
+        type: string
+      likeCount:
+        type: integer
+      chapters:
+        type: array
+        items: 
+          $ref: "#/definitions/Chapter"
+    required:
+      - id
+      - title
+      - logo
+      - description
+      
+    example:

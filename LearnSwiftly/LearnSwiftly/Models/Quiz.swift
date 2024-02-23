@@ -6,7 +6,7 @@
 
 import Foundation
 
-struct Quiz: Identifiable {
+struct Quiz: Identifiable, Codable {
     let id: UUID
     var showQuiz: Bool
     var question: String

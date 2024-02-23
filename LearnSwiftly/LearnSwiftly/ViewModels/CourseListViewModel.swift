@@ -30,14 +30,14 @@ class CourseListViewModel: ObservableObject {
                 self.courses = fetchedCourses
                 
                 // Subscribe to changes in statusColor for each course
-                self.courses.forEach { course in
-                    course.$statusColor
-                        .receive(on: DispatchQueue.main) // Ensure updates occur on the main thread
-                        .sink { [weak self] _ in
-                            self?.objectWillChange.send()
-                        }
-                        .store(in: &self.cancellables)
-                }
+//                self.courses.forEach { course in
+//                    course.$statusColor
+//                        .receive(on: DispatchQueue.main) // Ensure updates occur on the main thread
+//                        .sink { [weak self] _ in
+//                            self?.objectWillChange.send()
+//                        }
+//                        .store(in: &self.cancellables)
+//                }
             }
         } catch {
             print("error in loadCourses method.")

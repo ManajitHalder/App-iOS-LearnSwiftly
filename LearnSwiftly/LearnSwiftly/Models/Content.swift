@@ -6,14 +6,14 @@
 
 import Foundation
 
-enum ContentType {
+enum ContentType: Codable {
     case subtitle(String)
     case text(String)
     case code(String)
     case image(String)
 }
 
-struct ContentElement: Identifiable {
+struct ContentElement: Identifiable, Codable {
     let id: UUID
     let type: ContentType
     
@@ -23,7 +23,7 @@ struct ContentElement: Identifiable {
     }
 }
 
-struct Content: Identifiable {
+struct Content: Identifiable, Codable {
     let id: UUID
     var title: String
     var elements: [ContentElement]

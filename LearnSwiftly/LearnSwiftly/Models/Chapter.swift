@@ -6,14 +6,14 @@
 
 import Foundation
 
-enum ChapterStatus: String, CaseIterable {
+enum ChapterStatus: String, CaseIterable, Codable {
     case notStarted = "Not Started"
     case inProgress = "In Progress"
     case locked = "Locked"
     case completed = "Completed"
 }
 
-struct Chapter: Identifiable, Hashable, Equatable {
+struct Chapter: Identifiable, Hashable, Equatable, Codable {
     let id: UUID
     var name: String
     var summary: String

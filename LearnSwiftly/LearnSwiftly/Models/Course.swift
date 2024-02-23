@@ -7,7 +7,7 @@
 import Foundation
 import Combine
 
-enum CourseStatus: String, CaseIterable {
+enum CourseStatus: String, CaseIterable, Codable {
     case notEnrolled
     case enrolled
     case inProgress
@@ -22,13 +22,14 @@ enum CourseStatus: String, CaseIterable {
     }
 }
 
-class Course: Identifiable {
+class Course: Identifiable, Codable {
     let id: UUID
     var title: String
     var logo: String
     var description: String
     var status: CourseStatus
-    @Published var statusColor: String
+//    @Published var statusColor: String
+    var statusColor: String
     var likeCount: Int
     //var content: [[Chapter: Content]]
     var chapters: [Chapter]

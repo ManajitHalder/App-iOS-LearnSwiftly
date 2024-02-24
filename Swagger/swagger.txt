@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: '1.0'
+  version: '1.0.0'
   title: "LearnSwiftly: A Programming Language Learning App"
   description:  |
         LearnSwiftly is a programming language learning app that offers courses related to 
@@ -64,14 +64,16 @@ paths:
         List all Courses available for the user. User can enroll for a Course if it is accessible to the user.
         Free Courses are accessible to all User and to access Premium Courses User need to go for Premium.
       
-      summary: All Courses
+      summary: Retrieve a list of courses
+      produces:
+        - application/json
       responses:
         200:
-          description: Successful Response
+          description: A list of courses
           schema:
             type: array
             items:
-              $ref: '#/definitions/Course'
+              $ref: '#/definitions/CourseList'
           examples:
             application/json:
 
@@ -85,35 +87,52 @@ definitions:
       id:
         type: string
         format: uuid
+        example: "123e4567-e89b-12d3-a456-426744174000"
       showQuiz: 
         type: boolean
+        example: true
       question:
         type: string
+        example: "What are Optionals?"
       options:
         type: array
+        items:
+          type: string
+        example: ["What is the output of the following code?", "Is it correct statement?", "Choose the correct option"]
       answer:
         type: integer
+        example: 1
       responseMessage:
         type: string
+        example: "As per the definition of Optionals, ..."
       isCorrect:
         type: boolean
+        example: true
     required:
       - id
       - showQuiz
         
+  ContentType:
+    title: ContentType
+    type: string
+    enum:
+      - subtitle
+      - text
+      - code
+      - image
+      
   ContentElement:
     title: ContentElement
     type: object
     properties:
-      subtitle:
+      id: 
         type: string
-      text:
-        type: string
-      code:
-        type: string
-      image:
-        type: string
-      
+        format: uuid
+        example: "123e4567-e89b-12d3-a456-4267446659872"
+      type: 
+        $ref: "#/definitions/ContentType"
+        example: ""
+        
   Content:
     title: Content
     type: object
@@ -121,16 +140,29 @@ definitions:
       id:
         type: string
         format: uuid
+        example: "123e4567-e89b-23ew-a456-426614174020"
       title:
         type: string
+        example: ""
       elements:
         $ref: "#/definitions/ContentElement"
+        example: []
       quiz:
         type: array
         $ref: "#/definitions/Quiz"
+        example: []
     required:
       - id
       - title
+      
+  ChapterStatus:
+    title: ChapterStatus
+    type: string
+    enum:
+      - notStarted
+      - inProgress
+      - locked
+      - completed
         
   Chapter:
     title: Chapter
@@ -139,18 +171,24 @@ definitions:
       id:
         type: string
         format: uuid
+        example: "123e4567-e89b-12d3-a676-426614174020"
       name:
         type: string
+        example: "Protocols in Swift"
       summary:
         type: string
+        example: "Defines Protocols, different types of it and how to define Protocols"
       status:
-        type: string
+        $ref: "#/definitions/ChapterStatus"
+        example: "notStarted"
       chapterIndex:
         type: integer
+        example: 1
       contents:
         type: array
         items:
           $ref: "#/definitions/Content"
+          example: []
     required:
       - id
       - name
@@ -158,17 +196,13 @@ definitions:
         
   CourseStatus:
     title: CourseStatus
-    type: object
-    properties:
-      notEnabled: 
-        type: string
-      enrolled:
-        type: string
-      inProgress:
-        type: string
-      completed:
-        type: string
-      
+    type: string
+    enum:
+      - notEnrolled
+      - enrolled
+      - inProgress
+      - completed
+
   Course:
     title: Course
     type: object
@@ -176,26 +210,50 @@ definitions:
       id:
         type: string
         format: uuid
+        example: "123e4567-e89b-12d3-a456-426614174020"
       title:
         type: string
+        example: "Protocols in Swift"
       logo:
         type: string
+        example: "swift.logo"
       description:
         type: string
+        example: "Detailed explanation of Protocols in Swift programming language with its uses and examples"
       status:
         $ref: "#/definitions/CourseStatus"
+        example: "notEnrolled"
       statusColor:
         type: string
+        example: "red"
       likeCount:
         type: integer
+        example: 102
       chapters:
         type: array
         items: 
           $ref: "#/definitions/Chapter"
+          example: []
     required:
       - id
       - title
       - logo
       - description
       
+  CourseList:
+    type: array
+    items:
+      $ref: "#/definitions/Course"
+    
+      
     example:
+        id: "123e4567-e89b-12d3-a456-426614174000"
+        title: "Swift Programming Language"
+        logo: "swift_logo.png"
+        description: "Learn Swift programming language from scratch."
+        status: "enrolled"
+        statusColor: "green"
+        likeCount: 100
+        chapters: []
+        
+        

@@ -61,7 +61,7 @@ paths:
     x-summary: Course List
     get:
       description: 
-        List all Courses available for the user. User can enroll for a Course if it is accessible to the user.
+        List all Courses available for the user. User can enrol for a Course if it is accessible to the user.
         Free Courses are accessible to all User and to access Premium Courses User need to go for Premium.
       
       summary: Retrieve a list of courses
@@ -76,8 +76,130 @@ paths:
               $ref: '#/definitions/CourseList'
           examples:
             application/json:
-
-  
+              - id: "123e4567-e89b-12d3-a456-426614174000"
+                title: "Swift Programming Language"
+                logo: "globe.central.south.asia.fill"
+                description: "Learn Swift programming language from scratch."
+                status: "enrolled"
+                statusColor: "orangeColor"
+                likeCount: 100
+                chapters:
+                  - id: "11ce4567-e89b-12d3-a456-426614174000"
+                    name: "Introduction to Swift Programming Language"
+                    summary: "Introduces Swift Programming Language"
+                    status: "In Progress"
+                    chapterIndex: 1
+                    contents:
+                      - id: "11ce7665-e89b-12d3-a123-426614174000"
+                        title: "Basics of Swift Programming"
+                        elements: []
+                          # - id: "41ce7665-e89b-12d3-a123-426614174000"
+                          #   type: "subtitle"
+                          #   data: "Topic Name 1"
+                          
+                          # - id: "42ce7665-e89b-12d3-a123-426614174000"
+                          #   type: "text"
+                          #   data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          # - id: "43ce7665-e89b-12d3-a123-426614174000"
+                          #   type: "code"
+                          #   data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing in my app fksdfds fldsjf sdjfdlsj fkldsjfk jdsklfjsdlkfjsdklfjd dkslfjklds jfkldsjfklsdjfkljsd\n"
+                          
+                          # - id: "44ce7665-e89b-12d3-a123-426614174000"
+                          #   type: "image"
+                          #   data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "12ce4567-e89b-12d3-a456-426614174000"
+                    name: "Data Types in Swift"
+                    summary: "Basics Data Types in Swift programming language"
+                    status: "Not Started"
+                    chapterIndex: 2
+                    contents:
+                      - id: "12ce7665-e89b-12d3-a123-426614174000"
+                        title: "Variables in Swift"
+                        elements: []
+                        quiz: []
+                    
+                  - id: "13ce4567-e89b-12d3-a456-426614174000"
+                    name: "Optionals"
+                    summary: "What are Optional, When to use it?"
+                    status: "Not Started"
+                    chapterIndex: 3
+                    contents:
+                      - id: "13ce7665-e89b-12d3-a123-426614174000"
+                        title: "Strings in Swift"
+                        elements: []
+                        quiz: []
+                    
+                  - id: "14ce4567-e89b-12d3-a456-426614174000"
+                    name: "Multithreading in iOS"
+                    summary: "GCD and Operations Queues"
+                    status: "Not Started"
+                    chapterIndex: 4
+                    contents:
+                      - id: "14ce7665-e89b-12d3-a123-426614174000"
+                        title: "Optionals"
+                        elements: []
+                        quiz: []
+                    
+                  - id: "15ce4567-e89b-12d3-a456-426614174000"
+                    name: "Protocols in iOS"
+                    summary: "Introduces Protocols and its applications in the Language"
+                    status: "Not Started"
+                    chapterIndex: 5
+                    contents:
+                      - id: "15ce7665-e89b-12d3-a123-426614174000"
+                        title: "Closures with examples"
+                        elements: []
+                        quiz: []
+                
+              
+              - id: "223e4567-e89b-12d3-a456-426614174000"
+                title: "Swift Programming Basics"
+                logo: "person.text.rectangle"
+                description: "Learn programming in Swift for developing apps for iOS, iPadOS, MacOS and other Apple platforms."
+                status: "notEnrolled"
+                statusColor: "redColor"
+                likeCount: 12
+                chapters: []
+                
+              - id: "323e4567-e89b-12d3-a456-426614174000"
+                title: "Advanced Java Programming"
+                logo: "sun.dust.circle.fill"
+                description: "Learn programming in Java for developing apps for Web Development for MacOS and Windows platforms."
+                status: "notEnrolled"
+                statusColor: "redColor"
+                likeCount: 112
+                chapters: []
+              
+              - id: "423e4567-e89b-12d3-a456-426614174000"
+                title: "HTML and CSS for Web Development"
+                logo: "sparkles"
+                description: "Learn programming in HTML and CSS for developing apps for Web Development for MacOS and Windows platforms."
+                status: "notEnrolled"
+                statusColor: "redColor"
+                likeCount: 170
+                chapters: []
+              
+              - id: "523e4567-e89b-12d3-a456-426614174000"
+                title: "Drone Programming using Python"
+                logo: "airplane"
+                description: "Program your own drone using Python"
+                status: "enrolled"
+                statusColor: "orangeColor"
+                likeCount: 10
+                chapters: []
 
 definitions:
   Quiz:
@@ -131,6 +253,9 @@ definitions:
         example: "123e4567-e89b-12d3-a456-4267446659872"
       type: 
         $ref: "#/definitions/ContentType"
+        example: "subtitle"
+      data: 
+        type: string # Assuming content will always be string
         example: ""
         
   Content:

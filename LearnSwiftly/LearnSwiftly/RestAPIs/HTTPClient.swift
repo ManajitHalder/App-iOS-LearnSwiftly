@@ -29,7 +29,7 @@ class HttpClient {
     
     var courseURL: URL {
         get async throws {
-            guard let url = URL(string: "") else {
+            guard let url = URL(string: "https://private-74ae4c-learnswiftly.apiary-mock.com/courses") else {
                 throw HttpError.BadRequest
             }
             

@@ -92,22 +92,23 @@ paths:
                     contents:
                       - id: "11ce7665-e89b-12d3-a123-426614174000"
                         title: "Basics of Swift Programming"
-                        elements: []
-                          # - id: "41ce7665-e89b-12d3-a123-426614174000"
-                          #   type: "subtitle"
-                          #   data: "Topic Name 1"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
                           
-                          # - id: "42ce7665-e89b-12d3-a123-426614174000"
-                          #   type: "text"
-                          #   data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
                           
-                          # - id: "43ce7665-e89b-12d3-a123-426614174000"
-                          #   type: "code"
-                          #   data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing in my app fksdfds fldsjf sdjfdlsj fkldsjfk jdsklfjsdlkfjsdklfjd dkslfjklds jfkldsjfklsdjfkljsd\n"
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
                           
-                          # - id: "44ce7665-e89b-12d3-a123-426614174000"
-                          #   type: "image"
-                          #   data: "image"
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                            
                         quiz:
                           - id: "88ce7665-e89b-12d3-a123-426614174000"
                             showQuiz: true
@@ -250,7 +251,7 @@ definitions:
       id: 
         type: string
         format: uuid
-        example: "123e4567-e89b-12d3-a456-4267446659872"
+        example: "189e4567-e89b-12d3-a456-4267446659872"
       type: 
         $ref: "#/definitions/ContentType"
         example: "subtitle"
@@ -268,14 +269,15 @@ definitions:
         example: "123e4567-e89b-23ew-a456-426614174020"
       title:
         type: string
-        example: ""
+        example: "Topic No 1"
       elements:
+        type: array
         $ref: "#/definitions/ContentElement"
-        example: []
+        example: ["e", "f"]
       quiz:
         type: array
         $ref: "#/definitions/Quiz"
-        example: []
+        example: ["q1", "q2"]
     required:
       - id
       - title

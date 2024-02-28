@@ -98,8 +98,8 @@ struct LeaderBoardView: View {
                 ScrollView {
                     VStack {
                         ForEach((1...20), id: \.self) { _ in 
-                            LeaderboardRowView(rank: 1, profilePhoto: "heart", name: "Reyansh", score: 1021)
-                            LeaderboardRowView(rank: 2, profilePhoto: "heart.fill", name: "Annappa", score: 902)
+                            LeaderboardRowView(rank: 1, profilePhoto: "heart", name: "Reyansh Halder", score: 1021)
+                            LeaderboardRowView(rank: 2, profilePhoto: "heart.fill", name: "Manajit Halder", score: 902)
                         }
                     }
                     .padding(.top, 10)

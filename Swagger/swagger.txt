@@ -86,6 +86,279 @@ paths:
                 chapters:
                   - id: "11ce4567-e89b-12d3-a456-426614174000"
                     name: "Introduction to Swift Programming Language"
+                    summary: "Introduces Swift Programming Language, its history and evolution, features and advantages, setting up development environment and code examples at the end"
+                    status: "In Progress"
+                    chapterIndex: 1
+                    contents:
+                      - id: "11ce7665-e89b-12d3-a123-426614174000"
+                        title: "Basics of Swift Programming"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Introduction:"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "Welcome to the world of Swift programming! In this chapter, we'll embark on a journey to explore the fundamentals of Swift, Apple's powerful and intuitive programming language. We'll delve into its history, features, and advantages, and learn how to set up our development environment to start writing Swift code."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "History and Evolution:"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "Swift was first introduced by Apple Inc. in 2014 as a modern programming language for iOS, macOS, watchOS, and tvOS development. It was designed to be fast, safe, and expressive, aiming to provide developers with a more efficient and enjoyable coding experience compared to Objective-C. Since its inception, Swift has undergone several iterations, with each version bringing new features, improvements, and optimizations."
+                          
+                          - id: "45ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Features and Advantages:"
+                          
+                          - id: "46ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "One of the key features of Swift is its simplicity and readability. Its concise syntax and powerful constructs allow developers to write clean and expressive code, reducing the chances of errors and bugs. Swift also incorporates modern programming concepts such as optionals, closures, and generics, making it more versatile and efficient for a wide range of applications. Additionally, Swift benefits from seamless integration with Apple's ecosystem, offering access to powerful frameworks and tools for building robust and feature-rich applications."
+                          
+                          - id: "47ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Setting Up Development Environment:"
+                          
+                          - id: "48ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "Before we dive into coding with Swift, let's ensure that our development environment is properly set up. To write and run Swift code, you'll need Xcode, Apple's integrated development environment (IDE) for macOS. Xcode provides a comprehensive set of tools for writing, debugging, and testing Swift applications, along with a simulator for previewing and testing your apps on different devices. Once you've installed Xcode from the Mac App Store, you're ready to start your Swift programming journey!"
+                          
+                          - id: "49ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Code Examples:"
+                            
+                          - id: "50ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "Now that we have a basic understanding of Swift, let's explore some code examples to get a feel for the language. We'll start with simple concepts like declaring variables and constants, performing arithmetic operations, and using conditional statements. Here's a snippet of Swift code to demonstrate:"
+                          
+                          - id: "51ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "// Declaring variables and constants\n
+                                      var age: Int = 30\n
+                                      let name: String = \"John Doe\"\n
+
+                                      // Performing arithmetic operations\n
+                                      let sum = 10 + 20\n
+                                      let difference = 50 - 30\n
+                                      let product = 5 * 6\n
+                                      let quotient = 24 / 4\n
+
+                                      // Using conditional statements\n
+                                      if age >= 18 {\n
+                                          print(\"You are an adult\")\n
+                                      } else {\n
+                                          print(\"You are a minor\")\n
+                                      }\n
+                              "
+                          
+                          - id: "52ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                            
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What year was Swift first introduced by Apple Inc.?"
+                            options: ["1) 2008", "2) 2012", "3) 2014", "4) 2016"]
+                            answer: 3
+                            responseMessage: "Swift was first introduced by Apple Inc. in the year 2014"
+                            isCorrect: false
+                          
+                          - id: "89ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "Which of the following is a key feature of Swift?"
+                            options: [
+                              "1) Complex syntax", 
+                              "2) Slow performance", 
+                              "3) Readability and simplicity", 
+                              "4) Limited platform support"
+                              ]
+                            answer: 3
+                            responseMessage: " Readability and simplicity"
+                            isCorrect: false
+                          
+                          - id: "90ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the recommended IDE for Swift development on macOS?"
+                            options: [
+                              "1) Visual Studio Code", 
+                              "2) Sublime Text", 
+                              "3) Xcode", 
+                              "4) Android Studio"]
+                            answer: 3
+                            responseMessage: "Swift was first introduced by Apple Inc. in the year 2014"
+                            isCorrect: false
+                            
+                          - id: "91ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "Which keyword is used to declare a constant in Swift?"
+                            options: [
+                              "1) var", 
+                              "2) let", 
+                              "3) const", 
+                              "4) final"
+                              ]
+                            answer: 2
+                            responseMessage: "let"
+                            isCorrect: false
+                    
+                  - id: "12ce4567-e89b-12d3-a456-426614174000"
+                    name: "Data Types in Swift"
+                    summary: "Basics Data Types in Swift programming language"
+                    status: "Not Started"
+                    chapterIndex: 2
+                    contents:
+                      - id: "12ce7665-e89b-12d3-a123-426614174000"
+                        title: "Variables in Swift"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "13ce4567-e89b-12d3-a456-426614174000"
+                    name: "Optionals"
+                    summary: "What are Optional, When to use it?"
+                    status: "Not Started"
+                    chapterIndex: 3
+                    contents:
+                      - id: "13ce7665-e89b-12d3-a123-426614174000"
+                        title: "Strings in Swift"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "14ce4567-e89b-12d3-a456-426614174000"
+                    name: "Multithreading in iOS"
+                    summary: "GCD and Operations Queues"
+                    status: "Not Started"
+                    chapterIndex: 4
+                    contents:
+                      - id: "14ce7665-e89b-12d3-a123-426614174000"
+                        title: "Optionals"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "15ce4567-e89b-12d3-a456-426614174000"
+                    name: "Protocols in iOS"
+                    summary: "Introduces Protocols and its applications in the Language"
+                    status: "Not Started"
+                    chapterIndex: 5
+                    contents:
+                      - id: "15ce7665-e89b-12d3-a123-426614174000"
+                        title: "Closures with examples"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                
+              
+              - id: "223e4567-e89b-12d3-a456-426614174000"
+                title: "Swift Programming Basics"
+                logo: "person.text.rectangle"
+                description: "Learn programming in Swift for developing apps for iOS, iPadOS, MacOS and other Apple platforms."
+                status: "notEnrolled"
+                statusColor: "redColor"
+                likeCount: 12
+                chapters:
+                  - id: "11ce4567-e89b-12d3-a456-426614174000"
+                    name: "Introduction to Swift Programming Language"
                     summary: "Introduces Swift Programming Language"
                     status: "In Progress"
                     chapterIndex: 1
@@ -129,8 +402,33 @@ paths:
                     contents:
                       - id: "12ce7665-e89b-12d3-a123-426614174000"
                         title: "Variables in Swift"
-                        elements: []
-                        quiz: []
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
                     
                   - id: "13ce4567-e89b-12d3-a456-426614174000"
                     name: "Optionals"
@@ -140,8 +438,33 @@ paths:
                     contents:
                       - id: "13ce7665-e89b-12d3-a123-426614174000"
                         title: "Strings in Swift"
-                        elements: []
-                        quiz: []
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
                     
                   - id: "14ce4567-e89b-12d3-a456-426614174000"
                     name: "Multithreading in iOS"
@@ -151,8 +474,33 @@ paths:
                     contents:
                       - id: "14ce7665-e89b-12d3-a123-426614174000"
                         title: "Optionals"
-                        elements: []
-                        quiz: []
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
                     
                   - id: "15ce4567-e89b-12d3-a456-426614174000"
                     name: "Protocols in iOS"
@@ -162,18 +510,33 @@ paths:
                     contents:
                       - id: "15ce7665-e89b-12d3-a123-426614174000"
                         title: "Closures with examples"
-                        elements: []
-                        quiz: []
-                
-              
-              - id: "223e4567-e89b-12d3-a456-426614174000"
-                title: "Swift Programming Basics"
-                logo: "person.text.rectangle"
-                description: "Learn programming in Swift for developing apps for iOS, iPadOS, MacOS and other Apple platforms."
-                status: "notEnrolled"
-                statusColor: "redColor"
-                likeCount: 12
-                chapters: []
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
                 
               - id: "323e4567-e89b-12d3-a456-426614174000"
                 title: "Advanced Java Programming"
@@ -182,7 +545,187 @@ paths:
                 status: "notEnrolled"
                 statusColor: "redColor"
                 likeCount: 112
-                chapters: []
+                chapters:
+                  - id: "11ce4567-e89b-12d3-a456-426614174000"
+                    name: "Introduction to Swift Programming Language"
+                    summary: "Introduces Swift Programming Language"
+                    status: "In Progress"
+                    chapterIndex: 1
+                    contents:
+                      - id: "11ce7665-e89b-12d3-a123-426614174000"
+                        title: "Basics of Swift Programming"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                            
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "12ce4567-e89b-12d3-a456-426614174000"
+                    name: "Data Types in Swift"
+                    summary: "Basics Data Types in Swift programming language"
+                    status: "Not Started"
+                    chapterIndex: 2
+                    contents:
+                      - id: "12ce7665-e89b-12d3-a123-426614174000"
+                        title: "Variables in Swift"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "13ce4567-e89b-12d3-a456-426614174000"
+                    name: "Optionals"
+                    summary: "What are Optional, When to use it?"
+                    status: "Not Started"
+                    chapterIndex: 3
+                    contents:
+                      - id: "13ce7665-e89b-12d3-a123-426614174000"
+                        title: "Strings in Swift"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "14ce4567-e89b-12d3-a456-426614174000"
+                    name: "Multithreading in iOS"
+                    summary: "GCD and Operations Queues"
+                    status: "Not Started"
+                    chapterIndex: 4
+                    contents:
+                      - id: "14ce7665-e89b-12d3-a123-426614174000"
+                        title: "Optionals"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "15ce4567-e89b-12d3-a456-426614174000"
+                    name: "Protocols in iOS"
+                    summary: "Introduces Protocols and its applications in the Language"
+                    status: "Not Started"
+                    chapterIndex: 5
+                    contents:
+                      - id: "15ce7665-e89b-12d3-a123-426614174000"
+                        title: "Closures with examples"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
               
               - id: "423e4567-e89b-12d3-a456-426614174000"
                 title: "HTML and CSS for Web Development"
@@ -191,7 +734,187 @@ paths:
                 status: "notEnrolled"
                 statusColor: "redColor"
                 likeCount: 170
-                chapters: []
+                chapters:
+                  - id: "11ce4567-e89b-12d3-a456-426614174000"
+                    name: "Introduction to Swift Programming Language"
+                    summary: "Introduces Swift Programming Language"
+                    status: "In Progress"
+                    chapterIndex: 1
+                    contents:
+                      - id: "11ce7665-e89b-12d3-a123-426614174000"
+                        title: "Basics of Swift Programming"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                            
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "12ce4567-e89b-12d3-a456-426614174000"
+                    name: "Data Types in Swift"
+                    summary: "Basics Data Types in Swift programming language"
+                    status: "Not Started"
+                    chapterIndex: 2
+                    contents:
+                      - id: "12ce7665-e89b-12d3-a123-426614174000"
+                        title: "Variables in Swift"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "13ce4567-e89b-12d3-a456-426614174000"
+                    name: "Optionals"
+                    summary: "What are Optional, When to use it?"
+                    status: "Not Started"
+                    chapterIndex: 3
+                    contents:
+                      - id: "13ce7665-e89b-12d3-a123-426614174000"
+                        title: "Strings in Swift"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "14ce4567-e89b-12d3-a456-426614174000"
+                    name: "Multithreading in iOS"
+                    summary: "GCD and Operations Queues"
+                    status: "Not Started"
+                    chapterIndex: 4
+                    contents:
+                      - id: "14ce7665-e89b-12d3-a123-426614174000"
+                        title: "Optionals"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "15ce4567-e89b-12d3-a456-426614174000"
+                    name: "Protocols in iOS"
+                    summary: "Introduces Protocols and its applications in the Language"
+                    status: "Not Started"
+                    chapterIndex: 5
+                    contents:
+                      - id: "15ce7665-e89b-12d3-a123-426614174000"
+                        title: "Closures with examples"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
               
               - id: "523e4567-e89b-12d3-a456-426614174000"
                 title: "Drone Programming using Python"
@@ -200,7 +923,187 @@ paths:
                 status: "enrolled"
                 statusColor: "orangeColor"
                 likeCount: 10
-                chapters: []
+                chapters:
+                  - id: "11ce4567-e89b-12d3-a456-426614174000"
+                    name: "Introduction to Swift Programming Language"
+                    summary: "Introduces Swift Programming Language"
+                    status: "In Progress"
+                    chapterIndex: 1
+                    contents:
+                      - id: "11ce7665-e89b-12d3-a123-426614174000"
+                        title: "Basics of Swift Programming"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                            
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "12ce4567-e89b-12d3-a456-426614174000"
+                    name: "Data Types in Swift"
+                    summary: "Basics Data Types in Swift programming language"
+                    status: "Not Started"
+                    chapterIndex: 2
+                    contents:
+                      - id: "12ce7665-e89b-12d3-a123-426614174000"
+                        title: "Variables in Swift"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "13ce4567-e89b-12d3-a456-426614174000"
+                    name: "Optionals"
+                    summary: "What are Optional, When to use it?"
+                    status: "Not Started"
+                    chapterIndex: 3
+                    contents:
+                      - id: "13ce7665-e89b-12d3-a123-426614174000"
+                        title: "Strings in Swift"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "14ce4567-e89b-12d3-a456-426614174000"
+                    name: "Multithreading in iOS"
+                    summary: "GCD and Operations Queues"
+                    status: "Not Started"
+                    chapterIndex: 4
+                    contents:
+                      - id: "14ce7665-e89b-12d3-a123-426614174000"
+                        title: "Optionals"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
+                    
+                  - id: "15ce4567-e89b-12d3-a456-426614174000"
+                    name: "Protocols in iOS"
+                    summary: "Introduces Protocols and its applications in the Language"
+                    status: "Not Started"
+                    chapterIndex: 5
+                    contents:
+                      - id: "15ce7665-e89b-12d3-a123-426614174000"
+                        title: "Closures with examples"
+                        elements:
+                          - id: "41ce7665-e89b-12d3-a123-426614174000"
+                            type: "subtitle"
+                            data: "Topic Name 1"
+                          
+                          - id: "42ce7665-e89b-12d3-a123-426614174000"
+                            type: "text"
+                            data: "In this enum, serves as a clear indication that the task has not been initiated. Choose the term that aligns best with the language and context used in your application."
+                          
+                          - id: "43ce7665-e89b-12d3-a123-426614174000"
+                            type: "code"
+                            data: "struct ContentView: View {\n    var body: some View {\n        Text(\"Hello, SwiftUI, How are you doing?\n"
+                          
+                          - id: "44ce7665-e89b-12d3-a123-426614174000"
+                            type: "image"
+                            data: "image"
+                        quiz:
+                          - id: "88ce7665-e89b-12d3-a123-426614174000"
+                            showQuiz: true
+                            question: "What is the output of the swift code?"
+                            options: ["import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Int = 102\nvar num2: Int = 230\nvar sum: Int = num1 - num2\nprint(\"Sum is \\(sum)\")",
+                                      "import Foundation\nvar num1: Double = 102\nvar num2: Int = 230\nvar sum: Int = num1 + num2\nprint(\"Sum is \\(sum)\")"
+                                      ]
+                            answer: 2
+                            responseMessage: ""
+                            isCorrect: false
 
 definitions:
   Quiz:

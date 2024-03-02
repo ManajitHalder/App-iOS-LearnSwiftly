@@ -15,30 +15,30 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             ScrollView(showsIndicators: false) {
-                ForEach(contents) { content in
-                    TitleView(title: content.title)
+                ForEach(contents) { chapterContent in
+                    TitleView(title: chapterContent.title)
                     
-                    ForEach(content.elements) { element in
+                    ForEach(chapterContent.elements) { element in
                         switch element.type {
-                        case .subtitle(let subtitle):
-                            SubtitleView(subtitle: subtitle)
+                        case .subtitle:
+                            SubtitleView(subtitle: element.data)
                                 .multilineTextAlignment(.leading)
 
-                        case .text(let text):
-                            TextView(text: text)
+                        case .text:
+                            TextView(text: element.data)
                             
-                        case .code(let code):
-                            CodeView(languageName: "swift", code: code)
+                        case .code:
+                            CodeView(languageName: "swift", code: element.data)
                             
-                        case .image(let image):
-                            Text(image)
+                        case .image:
+                            Text(element.data)
                         }
                     }
                     
-//                    ForEach(content.quiz) { quiz in
-//                        QuizView(quiz: quiz)
-//                    }
-                    QuizView(quiz: Quiz.quiz1)
+                    ForEach(chapterContent.quiz) { quiz in
+                        QuizView(quiz: quiz)
+                    }
+//                    QuizView(quiz: Quiz.quiz1)
                 }
             }
             .padding([.leading, .trailing], 20)

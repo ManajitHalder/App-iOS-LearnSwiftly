@@ -15,12 +15,13 @@ struct LeaderboardHeaderBar: View {
             
             HStack {
                 Text("Leaderboard")
-                    .font(.title2)
+                    .font(.custom("Cochin", size: 30))
+                    .fontWeight(.bold)
                     .foregroundStyle(.black)
                 
                 Spacer()
             }
-            .padding(.top, 50)
+            .padding(.top, 25)
             .padding(.leading, 20)
         }
     }

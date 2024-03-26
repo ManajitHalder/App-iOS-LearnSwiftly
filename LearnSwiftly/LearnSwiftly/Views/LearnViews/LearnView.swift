@@ -22,7 +22,7 @@ struct LearnView: View {
                 LearnViewHeaderBar()
                 
                 HStack {
-                    Text("My Courses")
+                    Text("Courses Enrolled")
                         .font(.title2)
                         .foregroundColor(.white)
                     

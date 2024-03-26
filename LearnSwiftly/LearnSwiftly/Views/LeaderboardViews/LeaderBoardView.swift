@@ -22,7 +22,7 @@ struct LeaderboardPodiumView: View {
                     .scaledToFit()
                     .frame(width: 80, height: 70)
                     .padding(.trailing, 10)
-                    .foregroundColor(Color.red)
+//                    .foregroundColor(Color.red)
                 
                 Text("\(name)")
                     .font(.title)
@@ -42,7 +42,7 @@ struct LeaderboardPodiumView: View {
             .foregroundColor(Color.white)
         }
         .frame(height: 120)
-        .foregroundColor(Color.orange)
+        .foregroundColor(Color("screenBackground"))
     }
 }
 
@@ -85,15 +85,16 @@ struct LeaderBoardView: View {
             VStack(spacing: 0) {
                 LeaderboardHeaderBar()
                 
-                Rectangle()
-                    .frame(height: 1)
-                    .foregroundColor(Color.red)
+//                Rectangle()
+//                    .frame(height: 1)
+//                    .foregroundColor(Color.red)
+//                    .padding(.top, 10)
                
                 LeaderboardPodiumView(rank: 1, profilePhoto: "heart", name: "Reyansh", score: 1021)
                 
-                Rectangle()
-                    .frame(height: 1)
-                    .foregroundColor(Color.red)
+//                Rectangle()
+//                    .frame(height: 1)
+//                    .foregroundColor(Color.red)
                 
                 ScrollView {
                     VStack {
@@ -102,7 +103,10 @@ struct LeaderBoardView: View {
                             LeaderboardRowView(rank: 2, profilePhoto: "heart.fill", name: "Manajit Halder", score: 902)
                         }
                     }
+                    .background(Color.gray)
+                    .cornerRadius(5)
                     .padding(.top, 10)
+                    .padding([.leading, .trailing], 10)
                 }
                 
                 Spacer()

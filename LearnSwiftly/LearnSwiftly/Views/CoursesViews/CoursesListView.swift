@@ -19,7 +19,7 @@ struct CoursesListView: View {
 
         .overlay(
             VStack {
-                HeaderBar()
+                CoursesHeaderView()
                 
                 HStack {
                     Text("All Courses")

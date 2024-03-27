@@ -16,7 +16,7 @@ struct LearnViewHeaderBar: View {
                 .foregroundColor(Color("headerbar"))
             
             HStack {
-                Text("SwiftLearn")
+                Text("Learn")
                     .font(.custom("Cochin", size: 30))
                     .fontWeight(.bold)
                     .foregroundColor(.black)

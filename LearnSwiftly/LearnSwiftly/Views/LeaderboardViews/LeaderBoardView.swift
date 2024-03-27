@@ -66,6 +66,7 @@ struct LeaderboardRowView: View {
             Spacer()
             Text("\(score)")
         }
+        .font(.title3)
         .foregroundColor(.white)
         .padding([.leading, .trailing], 20)
         .frame(height: 50)

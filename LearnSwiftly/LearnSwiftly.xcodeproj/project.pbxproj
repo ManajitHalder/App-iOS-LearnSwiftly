@@ -20,12 +20,19 @@
 		C42115942B86616C0078F80C /* ProfileViewHeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42115932B86616C0078F80C /* ProfileViewHeaderBar.swift */; };
 		C428825E2B5B8C6F0039984F /* PremiumPaymentSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428825D2B5B8C6F0039984F /* PremiumPaymentSheetView.swift */; };
 		C440A79E2B5949A200935A47 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440A79D2B5949A200935A47 /* MainView.swift */; };
-		C440A7A02B598EC700935A47 /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440A79F2B598EC700935A47 /* LearningView.swift */; };
 		C440A7A22B598F2100935A47 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440A7A12B598F2100935A47 /* CourseView.swift */; };
 		C440A7A42B598F9100935A47 /* EnrolledCourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440A7A32B598F9100935A47 /* EnrolledCourseListView.swift */; };
 		C440A7A62B59903B00935A47 /* ChapterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440A7A52B59903B00935A47 /* ChapterListView.swift */; };
 		C45902F22BB32D1100EFD8AA /* CoursesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45902F12BB32D1100EFD8AA /* CoursesHeaderView.swift */; };
 		C476FF502B63B703003E74C8 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476FF4F2B63B703003E74C8 /* Quiz.swift */; };
+		C488933A2BB5D7FA00712599 /* LeaderboardPodiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48893392BB5D7FA00712599 /* LeaderboardPodiumView.swift */; };
+		C488933C2BB5D85400712599 /* LeaderboardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488933B2BB5D85400712599 /* LeaderboardRowView.swift */; };
+		C488933E2BB5D8E800712599 /* InviteFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488933D2BB5D8E800712599 /* InviteFriendView.swift */; };
+		C48893402BB5D90F00712599 /* InviteFriendSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488933F2BB5D90F00712599 /* InviteFriendSheetView.swift */; };
+		C48893422BB5DA1600712599 /* PremiumCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48893412BB5DA1600712599 /* PremiumCourseView.swift */; };
+		C48893442BB5DA4500712599 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48893432BB5DA4500712599 /* ScoreView.swift */; };
+		C48893462BB5DA6B00712599 /* CertificateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48893452BB5DA6B00712599 /* CertificateView.swift */; };
+		C48893482BB5DA8E00712599 /* ProfilePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48893472BB5DA8E00712599 /* ProfilePhotoView.swift */; };
 		C4AA8BF52B5A76A5002FBD86 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA8BF42B5A76A5002FBD86 /* OnboardingScreen.swift */; };
 		C4AA8BF82B5A76C4002FBD86 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA8BF72B5A76C4002FBD86 /* OnboardingPageView.swift */; };
 		C4AA8BFA2B5A8A46002FBD86 /* EnrolledCoursesPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA8BF92B5A8A46002FBD86 /* EnrolledCoursesPageView.swift */; };
@@ -62,12 +69,19 @@
 		C42115932B86616C0078F80C /* ProfileViewHeaderBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewHeaderBar.swift; sourceTree = "<group>"; };
 		C428825D2B5B8C6F0039984F /* PremiumPaymentSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPaymentSheetView.swift; sourceTree = "<group>"; };
 		C440A79D2B5949A200935A47 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		C440A79F2B598EC700935A47 /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
 		C440A7A12B598F2100935A47 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		C440A7A32B598F9100935A47 /* EnrolledCourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrolledCourseListView.swift; sourceTree = "<group>"; };
 		C440A7A52B59903B00935A47 /* ChapterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterListView.swift; sourceTree = "<group>"; };
 		C45902F12BB32D1100EFD8AA /* CoursesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesHeaderView.swift; sourceTree = "<group>"; };
 		C476FF4F2B63B703003E74C8 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		C48893392BB5D7FA00712599 /* LeaderboardPodiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardPodiumView.swift; sourceTree = "<group>"; };
+		C488933B2BB5D85400712599 /* LeaderboardRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardRowView.swift; sourceTree = "<group>"; };
+		C488933D2BB5D8E800712599 /* InviteFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendView.swift; sourceTree = "<group>"; };
+		C488933F2BB5D90F00712599 /* InviteFriendSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendSheetView.swift; sourceTree = "<group>"; };
+		C48893412BB5DA1600712599 /* PremiumCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumCourseView.swift; sourceTree = "<group>"; };
+		C48893432BB5DA4500712599 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		C48893452BB5DA6B00712599 /* CertificateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateView.swift; sourceTree = "<group>"; };
+		C48893472BB5DA8E00712599 /* ProfilePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoView.swift; sourceTree = "<group>"; };
 		C49C0C602B56FAED00BC3076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C4AA8BF42B5A76A5002FBD86 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
 		C4AA8BF72B5A76C4002FBD86 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
@@ -209,6 +223,8 @@
 			children = (
 				C404F9392B5823F000898F99 /* LeaderBoardView.swift */,
 				C42115912B865F330078F80C /* LeaderboardHeaderBar.swift */,
+				C48893392BB5D7FA00712599 /* LeaderboardPodiumView.swift */,
+				C488933B2BB5D85400712599 /* LeaderboardRowView.swift */,
 			);
 			path = LeaderboardViews;
 			sourceTree = "<group>";
@@ -218,7 +234,12 @@
 			children = (
 				C404F93B2B582AAE00898F99 /* ProfileView.swift */,
 				C42115932B86616C0078F80C /* ProfileViewHeaderBar.swift */,
-				C440A79F2B598EC700935A47 /* LearningView.swift */,
+				C48893472BB5DA8E00712599 /* ProfilePhotoView.swift */,
+				C488933D2BB5D8E800712599 /* InviteFriendView.swift */,
+				C488933F2BB5D90F00712599 /* InviteFriendSheetView.swift */,
+				C48893412BB5DA1600712599 /* PremiumCourseView.swift */,
+				C48893432BB5DA4500712599 /* ScoreView.swift */,
+				C48893452BB5DA6B00712599 /* CertificateView.swift */,
 			);
 			path = ProfileViews;
 			sourceTree = "<group>";
@@ -332,7 +353,6 @@
 				C403D6B62B568C9800B351D6 /* LearnView.swift in Sources */,
 				C403D6B42B568C9800B351D6 /* LearnSwiftlyApp.swift in Sources */,
 				C440A7A62B59903B00935A47 /* ChapterListView.swift in Sources */,
-				C440A7A02B598EC700935A47 /* LearningView.swift in Sources */,
 				C440A79E2B5949A200935A47 /* MainView.swift in Sources */,
 				C428825E2B5B8C6F0039984F /* PremiumPaymentSheetView.swift in Sources */,
 				C4AA8BFC2B5A9675002FBD86 /* LearnViewHeaderBar.swift in Sources */,
@@ -340,17 +360,21 @@
 				C4F7ABD12B5D34910014B985 /* Content.swift in Sources */,
 				C404F9382B5815E700898F99 /* HeaderBar.swift in Sources */,
 				C4BA5D9C2B6BAD2D00CE95FA /* QuizView.swift in Sources */,
+				C48893402BB5D90F00712599 /* InviteFriendSheetView.swift in Sources */,
 				C4C54D032B6AAD81006F3FE6 /* ContentView.swift in Sources */,
 				C404F9362B58149F00898F99 /* FooterBar.swift in Sources */,
+				C48893422BB5DA1600712599 /* PremiumCourseView.swift in Sources */,
 				C476FF502B63B703003E74C8 /* Quiz.swift in Sources */,
 				C4BA5D9E2B6BB46200CE95FA /* ChapterView.swift in Sources */,
 				C4AA8BFE2B5AC2AF002FBD86 /* UpgradeToProSheetView.swift in Sources */,
 				C42115922B865F330078F80C /* LeaderboardHeaderBar.swift in Sources */,
 				C42115942B86616C0078F80C /* ProfileViewHeaderBar.swift in Sources */,
 				C4F7ABCF2B5D33610014B985 /* Chapter.swift in Sources */,
+				C48893462BB5DA6B00712599 /* CertificateView.swift in Sources */,
 				C4BA5D982B6BACAA00CE95FA /* TitleView.swift in Sources */,
 				C4BA5D9A2B6BACE700CE95FA /* SubtitleView.swift in Sources */,
 				C4AA8BF82B5A76C4002FBD86 /* OnboardingPageView.swift in Sources */,
+				C488933E2BB5D8E800712599 /* InviteFriendView.swift in Sources */,
 				C440A7A22B598F2100935A47 /* CourseView.swift in Sources */,
 				C4BA5D962B6BA02A00CE95FA /* TextView.swift in Sources */,
 				C4AA8C022B5AED58002FBD86 /* PricingView.swift in Sources */,
@@ -358,10 +382,14 @@
 				C4AA8BF52B5A76A5002FBD86 /* OnboardingScreen.swift in Sources */,
 				C4F7ABCD2B5D321E0014B985 /* Course.swift in Sources */,
 				C4AA8BFA2B5A8A46002FBD86 /* EnrolledCoursesPageView.swift in Sources */,
+				C488933A2BB5D7FA00712599 /* LeaderboardPodiumView.swift in Sources */,
 				C404F93C2B582AAE00898F99 /* ProfileView.swift in Sources */,
 				C440A7A42B598F9100935A47 /* EnrolledCourseListView.swift in Sources */,
 				C4B71C4A2B87A3FF00FB250C /* HTTPClient.swift in Sources */,
+				C488933C2BB5D85400712599 /* LeaderboardRowView.swift in Sources */,
+				C48893442BB5DA4500712599 /* ScoreView.swift in Sources */,
 				C4B9459F2B617B6D003637DC /* CourseListViewModel.swift in Sources */,
+				C48893482BB5DA8E00712599 /* ProfilePhotoView.swift in Sources */,
 				C404F9332B57F27600898F99 /* CoursesListView.swift in Sources */,
 				C45902F22BB32D1100EFD8AA /* CoursesHeaderView.swift in Sources */,
 				C4AA8C002B5AEB00002FBD86 /* Constants.swift in Sources */,

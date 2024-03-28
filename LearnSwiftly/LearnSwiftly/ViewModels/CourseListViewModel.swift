@@ -18,29 +18,45 @@ class CourseListViewModel: ObservableObject {
 //    @Published var chapters: [Chapter] = []
 //    @Published var contents: [Content] = []
     
-    var cancellables: Set<AnyCancellable> = []
+    //var cancellables: Set<AnyCancellable> = []
     
     var course = AllCourses()
     
+//    func loadCourses() async throws {
+//        do {
+//            let fetchedCourses = try await course.fetchAllCourses()
+//            
+//            DispatchQueue.main.async {
+//                self.courses = fetchedCourses
+//                
+//                // Subscribe to changes in statusColor for each course
+    /*
+                self.courses.forEach { course in
+                    course.$statusColor
+                        .receive(on: DispatchQueue.main) // Ensure updates occur on the main thread
+                        .sink { [weak self] _ in
+                            self?.objectWillChange.send()
+                        }
+                        .store(in: &self.cancellables)
+                }
+     */
+//            }
+//        } catch {
+//            print("error in loadCourses method.")
+//        }
+//    }
+    
     func loadCourses() async throws {
-        do {
-            let fetchedCourses = try await course.fetchAllCourses()
-            
-            DispatchQueue.main.async {
-                self.courses = fetchedCourses
+        Task {
+            do {
+                let courseList = try await HttpClient.shared.fetchData()
                 
-                // Subscribe to changes in statusColor for each course
-//                self.courses.forEach { course in
-//                    course.$statusColor
-//                        .receive(on: DispatchQueue.main) // Ensure updates occur on the main thread
-//                        .sink { [weak self] _ in
-//                            self?.objectWillChange.send()
-//                        }
-//                        .store(in: &self.cancellables)
-//                }
+                DispatchQueue.main.async {
+                    self.courses = courseList
+                }
+            } catch {
+                print("Error in loading Courses")
             }
-        } catch {
-            print("error in loadCourses method.")
         }
     }
     

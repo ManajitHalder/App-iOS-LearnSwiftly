@@ -7,11 +7,32 @@
 import SwiftUI
 
 struct LeaderboardRowView: View {
+    let rank: Int
+    let profilePhoto: String
+    let name: String
+    let score: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("\(rank)")
+                .padding(.trailing, 20)
+            
+            Image(systemName: profilePhoto)
+                .padding(.trailing, 20)
+                .foregroundColor(Color.red)
+            
+            Text("\(name)")
+            
+            Spacer()
+            Text("\(score)")
+        }
+        .font(.title3)
+        .foregroundColor(.white)
+        .padding([.leading, .trailing], 20)
+        .frame(height: 50)
     }
 }
 
 #Preview {
-    LeaderboardRowView()
+    LeaderboardRowView(rank: 1, profilePhoto: "", name: "", score: 1)
 }

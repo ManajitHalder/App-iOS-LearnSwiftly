@@ -62,7 +62,21 @@ class CourseListViewModel: ObservableObject {
     
     init() {
         Task {
-            try await self.loadCourses()
+            do {
+                try await self.loadCourses()
+            } catch HttpError.BadRequest {
+                print("Bad request due to client error, may be bad URL")
+            } catch HttpError.UnauthorizedRequest {
+                print("Invalid authentication credentials")
+            } catch HttpError.RequestForbidden {
+                print("The server understood the request but refuses to authorize it")
+            } catch HttpError.ResourceNotFound {
+                print("The requested resource could not be found on the server")
+            } catch HttpError.InternalServerError {
+                print("An unexpected condition was encountered on the server")
+            } catch {
+                print("Error loading tasks: \(error)")
+            }
         }
     }
     
@@ -72,8 +86,11 @@ class CourseListViewModel: ObservableObject {
         updatedCourse.updateStatus(status: status)
         
         // Assuming courses is an array of ObservableObject
-        if let index = courses.firstIndex(where: {$0.id == updatedCourse.id }) {
-            courses[index] = updatedCourse
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            if let index = courses.firstIndex(where: {$0.id == updatedCourse.id }) {
+                courses[index] = updatedCourse
+            }
         }
     }
 }

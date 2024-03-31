@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct CoursesListView: View {
-    @StateObject var courseListViewModel = CourseListViewModel()
+    @EnvironmentObject var courseListViewModel: CourseListViewModel
     
     var body: some View {
         LinearGradient(
@@ -44,10 +44,11 @@ struct CoursesListView: View {
                                     statusColor: course.statusColor,
                                     onEnrollButtonTap: {
                                         courseListViewModel.updateCourseStatus(course: course, status: .enrolled)
+                                    },
+                                    onUnenrollButtonTap: {
+                                        courseListViewModel.updateCourseStatus(course: course, status: .notEnrolled)
                                     }
-//                                    onUnenrollButtonTap: {
-//                                        courseListViewModel.updateCourseStatus(course: course, status: .notEnrolled)
-//                                    }
+//                                    ,
 //                                    onLikeCourseOnTap: {
 //                                        courseListViewModel.likeCourse(course: Course, like: likeCount)
 //                                    }

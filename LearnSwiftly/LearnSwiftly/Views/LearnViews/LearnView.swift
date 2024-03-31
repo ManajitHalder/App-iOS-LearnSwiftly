@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct LearnView: View {
-    @ObservedObject private var courseListViewModel = CourseListViewModel()
+    @EnvironmentObject private var courseListViewModel: CourseListViewModel
     
     var body: some View {
         LinearGradient(
@@ -27,16 +27,6 @@ struct LearnView: View {
                         .foregroundColor(.white)
                     
                     Spacer()
-                    
-//                    NavigationLink(destination: CourseView()) {
-//                        Text("All Courses")
-//                            .font(.title3)
-//                            .foregroundColor(.black)
-//                            .padding(8)
-//                            .background(Color("headerbar"))
-//                            .cornerRadius(10)
-
-//                    }
                 }
 
                 .foregroundColor(.white)
@@ -52,6 +42,9 @@ struct LearnView: View {
                                         title: course.title,
                                         description: course.description,
                                         statusColor: course.statusColor,
+                                        onEnrollButtonTap: {
+                                            courseListViewModel.updateCourseStatus(course: course, status: .enrolled)
+                                        },
                                         onUnenrollButtonTap: {
                                             courseListViewModel.updateCourseStatus(course: course, status: .notEnrolled)
                                         }

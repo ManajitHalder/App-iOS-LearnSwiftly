@@ -7,16 +7,19 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject var courseListViewModel = CourseListViewModel()
     
     var body: some View {
         TabView {
             Group {
                 LearnView()
+                    .environmentObject(courseListViewModel)
                     .tabItem {
                         Label("Learn", systemImage: "book.fill")
                     }
                 
                 CoursesListView()
+                    .environmentObject(courseListViewModel)
                     .tabItem {
                         Label("Courses", systemImage: "list.bullet.clipboard.fill")
                     }

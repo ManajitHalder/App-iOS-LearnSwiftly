@@ -90,3 +90,23 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+
+# Vapor files
+Vapor/CourseApp/.DS_Store
+Vapor/CourseApp/.dockerignore
+Vapor/CourseApp/.gitignore
+Vapor/CourseApp/Dockerfile
+Vapor/CourseApp/Package.swift
+Vapor/CourseApp/docker-compose.yml
+Vapor/CourseApp/.build
+Vapor/CourseApp/.gitVapor
+Vapor/CourseApp/.swiftpm
+Vapor/CourseApp/Package.resolved
+
+# Vapor files ignored now, but may be needed later
+Vapor/CourseApp/Public/*
+Vapor/CourseApp/Sources/App/Controllers/*
+
+
+
